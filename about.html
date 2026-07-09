@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас — Gorn Import</title>
+  <meta name="description" content="Анна Степанова — ВЭД-эксперт с 8-летним опытом, официальный советник Российско-Китайской палаты.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="page-hero__pattern"></div>
+    <div class="page-hero__red-bar"></div>
+    <div class="container">
+      <div class="page-hero__eyebrow reveal-up">
+        <span class="page-hero__eyebrow-line"></span>
+        О компании
+      </div>
+      <h1 class="page-hero__title">
+        <div class="line"><span class="reveal-word">Мы становимся</span></div>
+        <div class="line"><span class="reveal-word" style="transition-delay:.15s"><span>частью</span> вашей команды</span></div>
+      </h1>
+      <p class="page-hero__sub reveal-up" style="--delay:.25s">
+        Не посредники и не перевозчики — стратегический партнёр, который думает о вашем бизнесе так же, как думаете о нём вы.
+      </p>
+    </div>
+  </section>
+
+  <!-- About main -->
+  <section class="section">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-split__photo reveal-up">
+          <div class="about-split__photo-frame">
+            <img src="anna.jpg" alt="Анна Степанова — ВЭД-эксперт"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="about-split__photo-placeholder" style="display:none">
+              <div class="about-split__photo-placeholder-letters">АГ</div>
+            </div>
+          </div>
+          <div class="about-split__photo-badge">
+            <div class="about-split__photo-badge-num">500+</div>
+            <div class="about-split__photo-badge-text">успешных проектов<br>по импорту</div>
+          </div>
+        </div>
+        <div class="reveal-up" style="--delay:.15s">
+          <span class="about-split__tag">
+            <span style="width:24px;height:2px;background:var(--red);display:inline-block"></span>
+            Основатель
+          </span>
+          <h2 class="about-split__name">Анна Степанова</h2>
+          <p class="about-split__role">ВЭД-эксперт · Официальный советник Российско-Китайской палаты · 10 лет в международной торговле</p>
+          <div class="about-split__text">
+            <p>Я начала работать в сфере ВЭД в 2017 году, когда увидела, как малый и средний бизнес переплачивает за импортные товары в 1.5–2 раза — просто потому что не знает, как правильно выстроить закупки.</p>
+            <p><strong>Моя задача — сделать международные закупки простыми и выгодными.</strong> Я лично контролирую каждую сделку и ищу возможности сэкономить там, где обычные логисты просто везут груз.</p>
+            <p>За 10 лет выстроила сеть проверенных партнёров в Китае, Турции, Индии, странах ЮВА и Европы. Знаю, кому можно доверять, а кому — нет. Именно поэтому мои клиенты спят спокойно.</p>
+          </div>
+          <!-- RKEP highlight -->
+          <div class="cred-highlight reveal-up">
+            <div class="cred-highlight__badge">
+              <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><polygon points="10,1 12.9,6.6 19,7.6 14.5,12 15.6,18.1 10,15.1 4.4,18.1 5.5,12 1,7.6 7.1,6.6" fill="currentColor"/></svg>
+              Официальный статус
+            </div>
+            <div class="cred-highlight__body">
+              <div class="cred-highlight__org">Российско-Китайская торговая палата</div>
+              <div class="cred-highlight__title">Официальный советник</div>
+              <div class="cred-highlight__event">
+                <svg viewBox="0 0 16 16" fill="none" width="13" height="13" style="flex-shrink:0;opacity:.7"><rect x="2" y="3" width="12" height="11" rx="2" stroke="currentColor" stroke-width="1.4"/><line x1="5" y1="1" x2="5" y2="5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="11" y1="1" x2="11" y2="5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="5" y1="9" x2="11" y2="9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+                Спикер конференции «Актуальные решения торговли с Китаем и странами БРИКС+» · 19–20 февраля 2026
+              </div>
+            </div>
+          </div>
+
+          <div class="about-split__creds">
+            <div class="about-split__cred" style="display:none"><!-- moved above --></div>
+            <div class="about-split__cred">
+              <span class="about-split__cred-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><polyline points="7,12 10.5,15.5 17,9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div class="about-split__cred-text">
+                <h4>500+ успешных проектов</h4>
+                <p>Малый и средний бизнес, производители, ритейл, e-commerce — во всех отраслях</p>
+              </div>
+            </div>
+            <div class="about-split__cred">
+              <span class="about-split__cred-icon">
+                <svg viewBox="0 0 24 24" fill="none" width="22" height="22"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="currentColor"/><line x1="12" y1="2" x2="12" y2="5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="2" y1="12" x2="5" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <div class="about-split__cred-text">
+                <h4>Личная сеть в 15+ странах</h4>
+                <p>Проверенные производители, которым можно доверять качество и сроки</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section section--navy">
+    <div class="container">
+      <div style="max-width:800px">
+        <div class="section-eyebrow reveal-up" style="color:var(--gold)">
+          <span class="section-eyebrow-line" style="background:var(--gold)"></span>
+          Наш принцип
+        </div>
+        <blockquote style="font-family:var(--font-h);font-size:clamp(24px,3.5vw,44px);font-weight:800;color:#fff;line-height:1.2;margin:24px 0 40px;quotes:none" class="reveal-up" style="--delay:.1s">
+          «Мы относимся к бюджету клиента так же внимательно, как к <span style="color:var(--red)">своему&nbsp;собственному</span>»
+        </blockquote>
+        <div style="display:flex;gap:40px;font-size:13px;color:rgba(255,255,255,.4);padding-top:24px;border-top:1px solid rgba(255,255,255,.1)" class="reveal-up" style="--delay:.2s">
+          <span>— Анна Степанова</span>
+          <span>ВЭД-эксперт и основатель Gorn Import</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>История компании</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Путь к 500+ клиентам</h2>
+      </div>
+      <div class="timeline__list">
+        <div class="timeline__item reveal-up">
+          <span class="timeline__year">2017</span>
+          <div class="timeline__dot"></div>
+          <div class="timeline__body">
+            <h4>Первые шаги в ВЭД</h4>
+            <p>Начало работы. Первые сделки с поставщиками из Китая. Изучение рынка изнутри — логистика, таможня, переговоры с зарубежными партнёрами.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal-up" style="--delay:.1s">
+          <span class="timeline__year">2019</span>
+          <div class="timeline__dot"></div>
+          <div class="timeline__body">
+            <h4>Расширение географии</h4>
+            <p>Выход на поставщиков из Турции, Индии и Юго-Восточной Азии. Формирование личной сети надёжных производителей в 8 странах.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal-up" style="--delay:.2s">
+          <span class="timeline__year">2020</span>
+          <div class="timeline__dot"></div>
+          <div class="timeline__body">
+            <h4>Основание Gorn Import</h4>
+            <p>Переход от разовых сделок к системной работе. Первые корпоративные клиенты с постоянными закупками. Портфель вырос до 50+ компаний.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal-up" style="--delay:.3s">
+          <span class="timeline__year">2022</span>
+          <div class="timeline__dot"></div>
+          <div class="timeline__body">
+            <h4>Адаптация к новым реалиям</h4>
+            <p>Перестройка логистических маршрутов. Нашли новые пути и каналы доставки — ни один клиент не почувствовал перебоев в поставках.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal-up" style="--delay:.4s">
+          <span class="timeline__year">2026</span>
+          <div class="timeline__dot"></div>
+          <div class="timeline__body">
+            <h4>Официальный советник РКЭП</h4>
+            <p>Анна Степанова — официальный советник Российско-Китайской палаты. Спикер на конференции по торговле с Китаем и странами БРИКС+. 500+ клиентов, 15 стран.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>Страны-партнёры</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Проверенные поставщики<br>в 15+ странах</h2>
+      </div>
+      <div class="partners__grid">
+        <div class="partner-card reveal-up"><span class="partner-card__flag flag-code">CN</span><span class="partner-card__name">Китай</span></div>
+        <div class="partner-card reveal-up" style="--delay:.05s"><span class="partner-card__flag flag-code">TR</span><span class="partner-card__name">Турция</span></div>
+        <div class="partner-card reveal-up" style="--delay:.1s"><span class="partner-card__flag flag-code">IN</span><span class="partner-card__name">Индия</span></div>
+        <div class="partner-card reveal-up" style="--delay:.15s"><span class="partner-card__flag flag-code">VN</span><span class="partner-card__name">Вьетнам</span></div>
+        <div class="partner-card reveal-up" style="--delay:.2s"><span class="partner-card__flag flag-code">KR</span><span class="partner-card__name">Корея</span></div>
+        <div class="partner-card reveal-up" style="--delay:.25s"><span class="partner-card__flag flag-code">JP</span><span class="partner-card__name">Япония</span></div>
+        <div class="partner-card reveal-up" style="--delay:.3s"><span class="partner-card__flag flag-code">DE</span><span class="partner-card__name">Германия</span></div>
+        <div class="partner-card reveal-up" style="--delay:.35s"><span class="partner-card__flag flag-code">IT</span><span class="partner-card__name">Италия</span></div>
+        <div class="partner-card reveal-up" style="--delay:.4s"><span class="partner-card__flag flag-code">PL</span><span class="partner-card__name">Польша</span></div>
+        <div class="partner-card reveal-up" style="--delay:.45s"><span class="partner-card__flag flag-code">AE</span><span class="partner-card__name">ОАЭ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2 class="cta-banner__title reveal-up">Давайте работать вместе</h2>
+        <p class="cta-banner__sub reveal-up" style="--delay:.1s">Расскажите о вашей задаче — разберём на бесплатной консультации</p>
+        <a href="contact.html" class="btn btn--navy btn--large reveal-up" style="--delay:.2s">Написать нам →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Услуги</h5>
+          <a href="services.html">ВЭД-консалтинг</a>
+          <a href="services.html">Организация импорта</a>
+          <a href="services.html">Логистика и таможня</a>
+          <a href="services.html">Аудит закупок</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

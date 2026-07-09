@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как импортировать из Китая в 2025–2026 году: полный гайд — Gorn Import</title>
+  <meta name="description" content="Пошаговая инструкция по импорту из Китая для малого и среднего бизнеса. Поиск поставщика, таможня, логистика, платежи — от ВЭД-эксперта Анны Горн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-hero { background: var(--navy); padding: 160px 0 80px; position: relative; overflow: hidden; }
+    .article-hero__pattern { position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px);pointer-events:none; }
+    .article-hero__red-bar { position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red); }
+    .article-hero__tag { display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:24px; }
+    .article-hero__title { font-family:var(--font-h);font-size:clamp(28px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px;max-width:800px; }
+    .article-hero__meta { display:flex;gap:24px;font-size:13px;color:rgba(255,255,255,.4);padding-top:32px;border-top:1px solid rgba(255,255,255,.1); }
+    .article-hero__meta strong { color:rgba(255,255,255,.7); }
+
+    .article-layout { display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start; }
+    .article-toc { position:sticky;top:100px;background:var(--surface);border-radius:8px;padding:28px;border:1px solid var(--border); }
+    .article-toc h4 { font-family:var(--font-h);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px; }
+    .article-toc ol { padding-left:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-toc ol li a { font-size:13px;color:var(--muted);transition:color .2s; }
+    .article-toc ol li a:hover { color:var(--red); }
+
+    .article-body { min-width:0; }
+    .article-body h2 { font-family:var(--font-h);font-size:26px;font-weight:800;color:var(--text);margin:56px 0 16px;padding-top:16px;border-top:2px solid var(--border2); }
+    .article-body h3 { font-family:var(--font-h);font-size:19px;font-weight:700;color:var(--text);margin:36px 0 12px; }
+    .article-body p { font-size:16px;line-height:1.8;color:#2d3a4a;margin-bottom:20px; }
+    .article-body ul,
+    .article-body ol { padding-left:24px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-body li { font-size:15px;line-height:1.7;color:#2d3a4a; }
+    .article-body strong { color:var(--text); }
+    .article-callout { background:var(--red-dim);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:20px 24px;margin:32px 0; }
+    .article-callout p { margin:0;color:var(--text);font-weight:500;font-size:15px; }
+    .article-table-wrap { overflow-x:auto;margin:32px 0; }
+    .article-table { width:100%;border-collapse:collapse;font-size:14px; }
+    .article-table th { background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-family:var(--font-h);font-weight:600;font-size:13px; }
+    .article-table td { padding:13px 16px;border-bottom:1px solid var(--border); }
+    .article-table tr:hover td { background:var(--surface); }
+    .step-block { display:flex;gap:20px;margin-bottom:28px;padding:24px;background:var(--surface);border-radius:8px;border:1px solid var(--border2); }
+    .step-block__num { font-family:var(--font-h);font-size:32px;font-weight:900;color:var(--red);opacity:.3;line-height:1;flex-shrink:0;width:48px; }
+    .step-block h3 { margin:0 0 8px;font-size:18px; }
+    .step-block p { margin:0;font-size:14px;color:var(--muted); }
+    .article-cta { background:var(--navy);border-radius:8px;padding:40px;margin:56px 0 0;text-align:center; }
+    .article-cta h3 { font-family:var(--font-h);font-size:22px;font-weight:800;color:#fff;margin-bottom:12px; }
+    .article-cta p { font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="blog.html">Блог</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero__pattern"></div>
+    <div class="article-hero__red-bar"></div>
+    <div class="container">
+      <div class="article-hero__tag reveal-up">
+        <a href="blog.html" style="color:var(--gold)">← Блог</a>
+        <span style="opacity:.4">·</span>
+        <span>Гайд</span>
+      </div>
+      <h1 class="article-hero__title reveal-up" style="--delay:.1s">
+        Как импортировать из Китая в&nbsp;2025–2026 году: полный гайд для малого бизнеса
+      </h1>
+      <div class="article-hero__meta reveal-up" style="--delay:.2s">
+        <span><strong>Автор:</strong> Анна Степанова</span>
+        <span><strong>Обновлено:</strong> Июль 2026</span>
+        <span><strong>Время чтения:</strong> 18 минут</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-layout">
+
+        <article class="article-body reveal-up">
+
+          <p>Импорт из Китая — один из самых эффективных способов снизить себестоимость товара для российского бизнеса. Но без понимания процесса это также один из самых рискованных. В этом гайде я собрала всё, что нужно знать для безопасного и выгодного импорта — от выбора товара до получения груза на склад.</p>
+
+          <div class="article-callout">
+            <p>💡 Статья написана на основе 8-летнего опыта в сфере ВЭД и более 500 успешных импортных сделок. Все советы актуальны для 2025–2026 года.</p>
+          </div>
+
+          <h2 id="step1">Шаг 1. Выбор товара и анализ рынка</h2>
+          <p>Прежде чем искать поставщика, нужно убедиться, что импорт товара из Китая вообще экономически оправдан. Не всё стоит везти: для одних категорий разница в цене после таможни и логистики становится минимальной, для других — сохраняется на уровне 40–60%.</p>
+
+          <h3>Что выгодно импортировать из Китая:</h3>
+          <ul>
+            <li>Электроника и комплектующие (маржа на посредниках — 60–150%)</li>
+            <li>Строительные материалы: фурнитура, крепёж, отделка</li>
+            <li>Одежда, обувь, текстиль (фабрики производят то же, что европейские бренды)</li>
+            <li>Промышленное оборудование и запчасти</li>
+            <li>Товары для дома и b2b-сегмента</li>
+            <li>Сырьё и полуфабрикаты для производства</li>
+          </ul>
+
+          <h3>Как оценить потенциальную экономию:</h3>
+          <p>Считайте не просто FOB-цену китайского поставщика, а полную стоимость доставки до вашего склада — CIF + таможня + НДС + брокер + последняя миля. Обычно это добавляет 25–45% к FOB-цене. Если после этих расчётов разница с российскими ценами всё ещё 20%+ — импорт целесообразен.</p>
+
+          <h2 id="step2">Шаг 2. Поиск китайских поставщиков</h2>
+          <p>Правильный выбор поставщика — 80% успеха всей сделки. Большинство проблем с качеством, сроками и деньгами возникают именно здесь.</p>
+
+          <div class="step-block">
+            <div class="step-block__num">01</div>
+            <div>
+              <h3>Alibaba.com — для тех, кто начинает</h3>
+              <p>Крупнейшая международная B2B-площадка. Верификация поставщиков через Gold Supplier и Trade Assurance. Цены выше, чем на внутренних площадках — но есть защита сделки.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">02</div>
+            <div>
+              <h3>1688.com — для опытных покупателей</h3>
+              <p>Внутренняя китайская площадка. Цены на 20–40% ниже Alibaba — те же фабрики, но без наценки «за экспорт». Нужен агент-посредник или хорошее знание китайского.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">03</div>
+            <div>
+              <h3>Выставки Canton Fair / Yiwu</h3>
+              <p>Лучший способ найти надёжных поставщиков — познакомиться лично. Canton Fair проходит дважды в год. Позволяет пощупать образцы и сразу обсудить условия.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">04</div>
+            <div>
+              <h3>Личные рекомендации и нетворкинг</h3>
+              <p>Самый надёжный канал. Если вы работаете с ВЭД-специалистом, у него уже есть сеть проверенных производителей — это экономит месяцы поиска и риски первых сделок.</p>
+            </div>
+          </div>
+
+          <h2 id="step3">Шаг 3. Проверка поставщика</h2>
+          <p>Никогда не переводите деньги поставщику без проверки. Даже если он выглядит надёжно на Alibaba.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Метод проверки</th>
+                  <th>Что даёт</th>
+                  <th>Стоимость</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Проверка через SAIC (реестр компаний КНР)</td><td>Юридическое существование, уставный капитал, собственники</td><td>Бесплатно</td></tr>
+                <tr><td>Заказ образцов перед основной партией</td><td>Реальное качество товара</td><td>Стоимость образцов + доставка</td></tr>
+                <tr><td>Фабричный аудит (выезд или онлайн)</td><td>Реальное производство, мощности, сертификаты</td><td>$300–800</td></tr>
+                <tr><td>Pre-shipment inspection (SGS, Bureau Veritas)</td><td>Качество готовой партии перед отгрузкой</td><td>$250–500</td></tr>
+                <tr><td>Trade Assurance на Alibaba</td><td>Частичная защита платежа</td><td>Включено</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <p>⚠️ Красный флаг: поставщик просит 100% предоплату на первую крупную партию без инспекции. Нормальная схема для новых партнёров — 30% аванс, 70% после подтверждения погрузки.</p>
+          </div>
+
+          <h2 id="step4">Шаг 4. Переговоры и условия контракта</h2>
+          <p>Цена на Alibaba — это стартовая цена, а не финальная. Китайские поставщики ожидают переговоров. При правильном подходе можно снизить цену на 10–25% ещё на этапе переговоров.</p>
+
+          <h3>Что обязательно прописать в контракте:</h3>
+          <ul>
+            <li>Точные технические характеристики товара (материалы, размеры, ГОСТ/CE/сертификаты)</li>
+            <li>Условия оплаты (30/70 или аккредитив)</li>
+            <li>Сроки производства и штрафы за задержку</li>
+            <li>Порядок обращения с браком (замена или возврат стоимости)</li>
+            <li>Право на инспекцию до отгрузки</li>
+            <li>Базис поставки (FOB, EXW, CIF)</li>
+          </ul>
+
+          <h2 id="step5">Шаг 5. Логистика и доставка</h2>
+          <p>Выбор маршрута и вида транспорта напрямую влияет на себестоимость и сроки. Для России в 2025–2026 году актуальны несколько основных вариантов:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Маршрут</th>
+                  <th>Срок</th>
+                  <th>Цена (за куб/кг)</th>
+                  <th>Лучше для</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Море → Владивосток</td><td>25–35 дней</td><td>Низкая</td><td>Крупные партии, несрочно</td></tr>
+                <tr><td>Ж/д (КЧЖТ)</td><td>18–25 дней</td><td>Средняя</td><td>Средние объёмы</td></tr>
+                <tr><td>Авто через Казахстан/Монголию</td><td>12–18 дней</td><td>Средняя</td><td>Габаритные грузы</td></tr>
+                <tr><td>Авиа</td><td>3–7 дней</td><td>Высокая</td><td>Срочно, малый вес, дорогой товар</td></tr>
+                <tr><td>Сборные грузы (LCL)</td><td>+5–10 дней к морю</td><td>Выше, чем FCL</td><td>Маленькие партии</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="step6">Шаг 6. Таможенное оформление</h2>
+          <p>Таможня — самый непредсказуемый этап для новичков. Задержки, дополнительные проверки, неверная классификация товара по ТН ВЭД — всё это стоит денег и нервов.</p>
+
+          <h3>Что нужно подготовить заранее:</h3>
+          <ul>
+            <li>Инвойс (Invoice) с правильной таможенной стоимостью</li>
+            <li>Упаковочный лист (Packing List)</li>
+            <li>Коносамент или авианакладная</li>
+            <li>Контракт с поставщиком</li>
+            <li>Сертификаты соответствия (если требуются для вашего товара)</li>
+            <li>Декларация о таможенной стоимости</li>
+          </ul>
+
+          <p>Работа с профессиональным таможенным брокером стоит 15 000–40 000 ₽ за декларацию, но экономит в разы больше на штрафах и задержках.</p>
+
+          <h2 id="step7">Шаг 7. Расчёты с китайским поставщиком</h2>
+          <p>Это больная тема 2024–2026 годов из-за санкционного давления. Часть банков отказывает в платежах в КНР. Рабочие схемы сегодня:</p>
+          <ul>
+            <li><strong>Юаневые переводы</strong> через банки с прямыми корсчетами в КНР (Газпромбанк, РСХБ и ряд других)</li>
+            <li><strong>Третьи страны</strong> — оплата через ОАЭ, Казахстан, Гонконг</li>
+            <li><strong>Агентские схемы</strong> — через торговые дома с опытом расчётов с Китаем</li>
+          </ul>
+
+          <div class="article-callout">
+            <p>Ситуация с платежами меняется каждые 2–3 месяца. Актуальные схемы уточняйте у ВЭД-специалиста перед каждой сделкой.</p>
+          </div>
+
+          <h2 id="mistakes">Топ-5 ошибок при первом импорте из Китая</h2>
+          <ol>
+            <li><strong>Не заказывать образцы.</strong> «Фотографии выглядели хорошо» — самая дорогостоящая фраза в ВЭД.</li>
+            <li><strong>Брать первого попавшегося поставщика.</strong> Анализ 5–10 предложений занимает неделю, но экономит месяцы проблем.</li>
+            <li><strong>Считать только FOB-цену.</strong> Финальная стоимость на вашем складе — в 1.4–1.6 раза выше. Считайте полную себестоимость.</li>
+            <li><strong>Работать без контракта.</strong> Устные договорённости не работают в международной торговле. Никогда.</li>
+            <li><strong>Экономить на брокере.</strong> Первая декларация самостоятельно обходится дороже, чем год работы с брокером.</li>
+          </ol>
+
+          <div class="article-cta">
+            <h3>Хотите организовать импорт из Китая?</h3>
+            <p>Расскажите о вашем товаре — разберём на бесплатной консультации, насколько выгоден импорт именно для вас и с чего начать.</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary btn--large">gorn.import@mail.ru →</a>
+          </div>
+
+        </article>
+
+        <!-- TOC sidebar -->
+        <aside class="article-toc reveal-up" style="--delay:.2s">
+          <h4>Содержание</h4>
+          <ol>
+            <li><a href="#step1">Выбор товара и анализ</a></li>
+            <li><a href="#step2">Поиск поставщиков</a></li>
+            <li><a href="#step3">Проверка поставщика</a></li>
+            <li><a href="#step4">Переговоры и контракт</a></li>
+            <li><a href="#step5">Логистика и доставка</a></li>
+            <li><a href="#step6">Таможенное оформление</a></li>
+            <li><a href="#step7">Расчёты с поставщиком</a></li>
+            <li><a href="#mistakes">Топ-5 ошибок</a></li>
+          </ol>
+          <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Нужна помощь с импортом?</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary" style="width:100%;justify-content:center;font-size:13px">Написать нам</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>Другие статьи</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Читайте также</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <a href="blog-supplier-check.html" class="service-item reveal-up">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Как проверить китайского поставщика</h3>
+            <p>7 методов, которые реально работают</p>
+          </div>
+        </a>
+        <a href="blog-logistics-routes.html" class="service-item reveal-up" style="--delay:.08s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Маршруты доставки из Китая 2026</h3>
+            <p>Море, авто, ж/д, авиа — сравнение</p>
+          </div>
+        </a>
+        <a href="blog-customs-duty.html" class="service-item reveal-up" style="--delay:.16s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Таможенные пошлины: как считать</h3>
+            <p>ТН ВЭД, ставки, оптимизация</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Статьи</h5>
+          <a href="blog-china-import-guide.html">Импорт из Китая: гайд</a>
+          <a href="blog-supplier-check.html">Проверка поставщика</a>
+          <a href="blog-logistics-routes.html">Маршруты доставки</a>
+          <a href="blog-customs-duty.html">Таможенные пошлины</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

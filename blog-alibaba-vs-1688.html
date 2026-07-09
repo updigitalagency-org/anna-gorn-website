@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alibaba vs 1688: где искать поставщиков и в чём разница для российского бизнеса — Gorn Import</title>
+  <meta name="description" content="Подробное сравнение Alibaba.com и 1688.com для российских импортёров: цены, минимальные заказы, безопасность сделок, пошаговый алгоритм работы. Эксперт по ВЭД Анна Степанова.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-hero { background: var(--navy); padding: 160px 0 80px; position: relative; overflow: hidden; }
+    .article-hero__pattern { position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px);pointer-events:none; }
+    .article-hero__red-bar { position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red); }
+    .article-hero__tag { display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:24px; }
+    .article-hero__title { font-family:var(--font-h);font-size:clamp(28px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px;max-width:800px; }
+    .article-hero__meta { display:flex;gap:24px;font-size:13px;color:rgba(255,255,255,.4);padding-top:32px;border-top:1px solid rgba(255,255,255,.1); }
+    .article-hero__meta strong { color:rgba(255,255,255,.7); }
+
+    .article-layout { display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start; }
+    .article-toc { position:sticky;top:100px;background:var(--surface);border-radius:8px;padding:28px;border:1px solid var(--border); }
+    .article-toc h4 { font-family:var(--font-h);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px; }
+    .article-toc ol { padding-left:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-toc ol li a { font-size:13px;color:var(--muted);transition:color .2s; }
+    .article-toc ol li a:hover { color:var(--red); }
+
+    .article-body { min-width:0; }
+    .article-body h2 { font-family:var(--font-h);font-size:26px;font-weight:800;color:var(--text);margin:56px 0 16px;padding-top:16px;border-top:2px solid var(--border2); }
+    .article-body h3 { font-family:var(--font-h);font-size:19px;font-weight:700;color:var(--text);margin:36px 0 12px; }
+    .article-body p { font-size:16px;line-height:1.8;color:#2d3a4a;margin-bottom:20px; }
+    .article-body ul,
+    .article-body ol { padding-left:24px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-body li { font-size:15px;line-height:1.7;color:#2d3a4a; }
+    .article-body strong { color:var(--text); }
+    .article-callout { background:var(--red-dim);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:20px 24px;margin:32px 0; }
+    .article-callout--tip { background:#f0f7f0;border-left-color:#2e7d32; }
+    .article-callout--tip p { color:#1b5e20; }
+    .article-callout p { margin:0;color:var(--text);font-weight:500;font-size:15px; }
+    .article-table-wrap { overflow-x:auto;margin:32px 0; }
+    .article-table { width:100%;border-collapse:collapse;font-size:14px; }
+    .article-table th { background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-family:var(--font-h);font-weight:600;font-size:13px; }
+    .article-table td { padding:13px 16px;border-bottom:1px solid var(--border); }
+    .article-table tr:hover td { background:var(--surface); }
+    .article-table .tag-green { display:inline-block;background:#e8f5e9;color:#2e7d32;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px; }
+    .article-table .tag-yellow { display:inline-block;background:#fff8e1;color:#f57f17;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px; }
+    .step-block { display:flex;gap:20px;margin-bottom:28px;padding:24px;background:var(--surface);border-radius:8px;border:1px solid var(--border2); }
+    .step-block__num { font-family:var(--font-h);font-size:32px;font-weight:900;color:var(--red);opacity:.3;line-height:1;flex-shrink:0;width:48px; }
+    .step-block h3 { margin:0 0 8px;font-size:18px; }
+    .step-block p { margin:0;font-size:14px;color:var(--muted); }
+    .article-cta { background:var(--navy);border-radius:8px;padding:40px;margin:56px 0 0;text-align:center; }
+    .article-cta h3 { font-family:var(--font-h);font-size:22px;font-weight:800;color:#fff;margin-bottom:12px; }
+    .article-cta p { font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="blog.html">Блог</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero__pattern"></div>
+    <div class="article-hero__red-bar"></div>
+    <div class="container">
+      <div class="article-hero__tag reveal-up">
+        <a href="blog.html" style="color:var(--gold)">← Блог</a>
+        <span style="opacity:.4">·</span>
+        <span>Площадки</span>
+      </div>
+      <h1 class="article-hero__title reveal-up" style="--delay:.1s">
+        Alibaba vs 1688: где искать поставщиков и в чём разница для российского бизнеса
+      </h1>
+      <div class="article-hero__meta reveal-up" style="--delay:.2s">
+        <span><strong>Автор:</strong> Анна Степанова</span>
+        <span><strong>Апрель 2026</strong></span>
+        <span><strong>Время чтения:</strong> 11 минут</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-layout">
+
+        <article class="article-body reveal-up">
+
+          <p>Когда российский предприниматель впервые слышит о закупках в Китае, он обычно знает об одной площадке — Alibaba. Но опытные импортёры давно работают ещё и с 1688.com, где те же фабрики продают товар в 1,5–2 раза дешевле. Разбираемся, в чём принципиальная разница и какую платформу выбрать в зависимости от вашей ситуации.</p>
+
+          <h2 id="intro">Что такое Alibaba и 1688: кто стоит за платформами</h2>
+
+          <p>Обе площадки принадлежат одной компании — Alibaba Group, крупнейшему технологическому конгломерату Китая. Но созданы они для принципиально разных аудиторий и решают разные задачи.</p>
+
+          <p><strong>Alibaba.com</strong> — международная B2B-платформа, запущенная в 1999 году. Весь интерфейс — на английском языке, цены выражены в долларах и евро, продавцы ориентированы на экспорт. Это витрина китайской промышленности для всего мира.</p>
+
+          <p><strong>1688.com</strong> — внутренняя китайская оптовая площадка. Интерфейс на мандаринском, цены в юанях, поставщики работают преимущественно с китайскими покупателями. Именно здесь фабрики продают товар по тем же ценам, что и местным оптовикам, — без наценки «за экспорт» и без нужды в переводчике между собственником завода и покупателем.</p>
+
+          <p>Грубая аналогия: Alibaba — это торговый центр с вывесками на английском и ценниками в валюте, 1688 — это оптовый рынок в том же городе, где всё написано на китайском и где покупают местные перекупщики.</p>
+
+          <h2 id="alibaba">Alibaba.com: для кого подходит, как устроена защита Trade Assurance</h2>
+
+          <p>Alibaba создана специально для того, чтобы иностранным покупателям было комфортно и безопасно работать с китайскими поставщиками. Именно поэтому здесь развита система верификации и защиты сделок.</p>
+
+          <h3>Ключевые особенности Alibaba.com:</h3>
+          <ul>
+            <li><strong>Gold Supplier</strong> — статус, который платный поставщик получает после верификации Alibaba. Не гарантирует качество товара, но подтверждает, что компания реально существует.</li>
+            <li><strong>Verified Manufacturer / Verified Supplier</strong> — более строгая проверка: выезд инспектора на производство, проверка документов. Таким поставщикам можно доверять больше.</li>
+            <li><strong>Trade Assurance</strong> — ключевой инструмент защиты. Alibaba замораживает платёж и выпускает его поставщику только после того, как покупатель подтвердит получение товара надлежащего качества. Если товар не соответствует заявленному — Alibaba проводит арбитраж и может вернуть деньги.</li>
+            <li><strong>Английский интерфейс и поддержка</strong> — можно вести переписку, читать отзывы и оформлять заказы без знания китайского.</li>
+          </ul>
+
+          <div class="article-callout article-callout--tip">
+            <p>💡 Совет: для первой сделки всегда выбирайте Alibaba и работайте только через Trade Assurance. Да, цена будет выше — но вы получаете механизм возврата денег при проблемах. На первом заказе это важнее экономии 20%.</p>
+          </div>
+
+          <p>Trade Assurance покрывает два типа нарушений со стороны поставщика: задержку отгрузки сверх оговорённого срока и несоответствие качества товара описанию в контракте. Для активации защиты вся переписка и документы должны быть оформлены внутри платформы — не в WeChat, не по email.</p>
+
+          <h2 id="1688">1688.com: прямые заводские цены, но сложнее работать иностранцам</h2>
+
+          <p>1688 — это Alibaba без международной надстройки. Те же поставщики, те же фабрики, иногда буквально те же люди — но продающие товар по внутрикитайским ценам. Разрыв в стоимости реален и существенен.</p>
+
+          <h3>Почему 1688 сложнее для российского покупателя:</h3>
+          <ul>
+            <li>Весь интерфейс — на китайском. Браузерный переводчик помогает, но не всегда корректно переводит технические характеристики.</li>
+            <li>Нет системы защиты платежей уровня Trade Assurance. Споры решаются через платформенный арбитраж, но поставщики заточены на работу с китайскими покупателями, которые понимают местные правила игры.</li>
+            <li>Для оплаты нужен китайский Alipay или WeChat Pay — напрямую с российской карты пополнить счёт не получится. Необходим посредник (агент) или специальный сервис.</li>
+            <li>Минимальные объёмы могут быть ниже, чем на Alibaba, но коммуникация с поставщиком — только на китайском.</li>
+            <li>Качество поставщиков сильно варьируется. Здесь меньше фильтрации, чем на Alibaba.</li>
+          </ul>
+
+          <div class="article-callout">
+            <p>⚠️ Предупреждение: работать с 1688 напрямую, без агента или посредника, для российского покупателя — серьёзный риск. Вы не сможете нормально проверить поставщика, провести оплату и разрешить спор при проблемах. Эта площадка эффективна только при наличии надёжного агента в Китае.</p>
+          </div>
+
+          <h2 id="prices">Разница в ценах: на сколько 1688 дешевле и когда это важно</h2>
+
+          <p>Разброс цен на одинаковый товар между Alibaba и 1688 составляет <strong>от 20% до 50%</strong>, в редких категориях — до 60%. Это не магия и не обман: на Alibaba поставщик закладывает в цену несколько дополнительных статей расходов.</p>
+
+          <h3>Из чего складывается наценка Alibaba:</h3>
+          <ul>
+            <li>Комиссия платформе за Gold Supplier статус и продвижение</li>
+            <li>Расходы на англоязычного менеджера по экспортным продажам</li>
+            <li>Буфер за риски международной торговли (Trade Assurance тоже стоит денег)</li>
+            <li>Нередко — наценка перекупщика, а не прямого производителя</li>
+          </ul>
+
+          <p>На 1688 вы часто попадаете напрямую на завод, который продаёт по той же цене, что местным оптовикам. Разница особенно заметна в категориях: металлоизделия, электроника, одежда, стройматериалы, бытовая химия.</p>
+
+          <p><strong>Пример из практики:</strong> подшипники промышленные на Alibaba — $2.80/шт. при MOQ 1000 единиц. На 1688 — 12,5 юаня (~$1.70/шт.) при MOQ 500 единиц. Экономия на партии 5000 штук — около $5 500. При таких объёмах комиссия агента в Китае ($300–600) окупается многократно.</p>
+
+          <h2 id="moq">Минимальные заказы: где меньше и как торговаться</h2>
+
+          <p>Здесь нет однозначного победителя — минимальный заказ (MOQ) зависит от конкретного поставщика и категории товара, а не от платформы как таковой.</p>
+
+          <p>На <strong>Alibaba</strong> MOQ часто искусственно занижен, чтобы привлечь иностранных покупателей — поставщики понимают, что первая сделка может быть пробной. Реальный MOQ выясняется в переписке: нередко при заказе меньше желаемого объёма цена единицы вырастает на 15–30%.</p>
+
+          <p>На <strong>1688</strong> MOQ ориентирован на внутренний рынок: поставщики привыкли работать с китайскими оптовиками, которые берут большими партиями. Но поскольку здесь меньше иностранных конкурентов за внимание поставщика, опытный агент может договориться на меньший объём по хорошей цене.</p>
+
+          <h3>Как торговаться по MOQ:</h3>
+          <ul>
+            <li>Ссылайтесь на перспективу регулярных заказов — «если качество подтвердится, берём ежеквартально»</li>
+            <li>Предлагайте оплату авансом в обмен на снижение MOQ</li>
+            <li>Спрашивайте про «sample order» — образцовый заказ по специальной цене</li>
+            <li>На 1688 торгуйтесь через агента, который понимает китайскую деловую культуру</li>
+          </ul>
+
+          <h2 id="safety">Безопасность сделки: Trade Assurance vs прямые переговоры</h2>
+
+          <p>Это главное качественное различие между платформами, которое определяет выбор для большинства российских импортёров.</p>
+
+          <h3>Trade Assurance на Alibaba:</h3>
+          <ul>
+            <li>Платёж замораживается на счёте Alibaba до подтверждения получения товара</li>
+            <li>При несоответствии качества — арбитраж с реальными шансами на возврат средств</li>
+            <li>История сделок фиксируется на платформе и служит доказательной базой</li>
+            <li>Работает только при оплате через Alibaba (не напрямую на счёт поставщика)</li>
+          </ul>
+
+          <h3>1688: прямые переговоры без системной защиты:</h3>
+          <ul>
+            <li>Оплата через Alipay или WeChat Pay — платёж уходит поставщику напрямую</li>
+            <li>При проблемах — разбирательство через платформу 1688, но механизм слабее</li>
+            <li>Основная защита — репутация поставщика на платформе и договор с агентом</li>
+            <li>Хорошая практика: агент удерживает финальный платёж до проверки товара перед отгрузкой</li>
+          </ul>
+
+          <p>Для новых поставщиков, с которыми вы не работали раньше, разумная схема на 1688 такова: агент делает предзагрузочную инспекцию товара и только после положительного отчёта выпускает финальный платёж. Это частично компенсирует отсутствие Trade Assurance.</p>
+
+          <h2 id="howto">Пошаговый алгоритм работы с каждой платформой</h2>
+
+          <h3>Alibaba.com — алгоритм для самостоятельной работы:</h3>
+
+          <div class="step-block">
+            <div class="step-block__num">01</div>
+            <div>
+              <h3>Поиск и фильтрация поставщиков</h3>
+              <p>Используйте фильтры: Verified Manufacturer, Trade Assurance, минимальный рейтинг откликов. Отберите 8–12 поставщиков, не останавливайтесь на первом.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">02</div>
+            <div>
+              <h3>Запрос коммерческих предложений (RFQ)</h3>
+              <p>Отправьте запрос всем отобранным поставщикам одновременно. Укажите точные характеристики, объём, желаемый срок. Сравните ответы через 2–3 дня.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">03</div>
+            <div>
+              <h3>Проверка поставщика перед заказом</h3>
+              <p>Проверьте через реестр компаний КНР (qcc.com или tianyancha.com). Запросите экспортную лицензию. Проверьте отзывы на платформе — не только рейтинг, но и текст комментариев.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">04</div>
+            <div>
+              <h3>Заказ образца</h3>
+              <p>Никогда не пропускайте этот шаг при первой сделке. Образец покажет реальное качество — не то, что на фото. Стоимость обычно $50–200 + доставка.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">05</div>
+            <div>
+              <h3>Оформление заказа через Trade Assurance</h3>
+              <p>Все условия — сроки, характеристики, условия оплаты — фиксируются в контракте внутри платформы. Оплата только через Alibaba, не на прямой счёт поставщика.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">06</div>
+            <div>
+              <h3>Контроль производства и отгрузки</h3>
+              <p>Запросите фото/видео с производства на ключевых этапах. Для крупных партий закажите pre-shipment inspection через SGS или аналог — $250–500 за выезд инспектора.</p>
+            </div>
+          </div>
+
+          <h3>1688.com — алгоритм через агента:</h3>
+
+          <div class="step-block">
+            <div class="step-block__num">01</div>
+            <div>
+              <h3>Выбор агента в Китае</h3>
+              <p>Агент должен иметь опыт именно с 1688, юридически оформленную компанию в КНР и понятную систему вознаграждения (обычно 5–10% от стоимости товара или фиксированная ставка).</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">02</div>
+            <div>
+              <h3>Поиск поставщика совместно с агентом</h3>
+              <p>Вы находите товар на 1688, агент проверяет поставщика по внутрикитайским базам, связывается напрямую, узнаёт реальный MOQ и цены без наценки «для иностранца».</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">03</div>
+            <div>
+              <h3>Переговоры и согласование условий</h3>
+              <p>Агент ведёт переговоры на китайском. Это критически важно: многие поставщики на 1688 не знают английского совсем и дают лучшие цены «своим».</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">04</div>
+            <div>
+              <h3>Оплата через агента</h3>
+              <p>Агент принимает ваш платёж в юанях или рублях (по договорённости) и оплачивает поставщику через Alipay. Схема оплаты фиксируется в договоре с агентом.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">05</div>
+            <div>
+              <h3>Инспекция перед отгрузкой</h3>
+              <p>Агент организует осмотр товара на складе поставщика. Финальный платёж поставщику — только после положительного заключения. Это замена Trade Assurance на 1688.</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-block__num">06</div>
+            <div>
+              <h3>Консолидация и отправка</h3>
+              <p>Если вы закупаете у нескольких поставщиков с 1688, агент консолидирует товар на своём складе и отправляет одним грузом — это экономит на логистике.</p>
+            </div>
+          </div>
+
+          <h2 id="when">Когда использовать Alibaba, а когда 1688: практические сценарии</h2>
+
+          <p>Нет универсального ответа — выбор площадки зависит от вашего опыта, объёма закупки, категории товара и наличия агента. Вот практические сценарии из реальной работы:</p>
+
+          <h3>Используйте Alibaba, если:</h3>
+          <ul>
+            <li>Это ваша первая или вторая сделка с китайским поставщиком</li>
+            <li>Сумма контракта небольшая (до $5 000) и разница в 20–30% не критична</li>
+            <li>Вы хотите самостоятельно контролировать сделку без посредников</li>
+            <li>Товар сложный, нужна детальная техническая переписка на английском</li>
+            <li>Вы не уверены в поставщике и хотите защиту Trade Assurance</li>
+          </ul>
+
+          <h3>Используйте 1688, если:</h3>
+          <ul>
+            <li>У вас есть надёжный агент в Китае или вы сами там живёте</li>
+            <li>Объём закупки большой (от $10 000) и разница в цене составляет значимую сумму</li>
+            <li>Вы уже работаете с конкретным поставщиком и хотите найти его «напрямую» дешевле</li>
+            <li>Товар стандартный (металл, ткань, крепёж) — не нужна длинная техническая дискуссия</li>
+            <li>Вы готовы к более сложной схеме оплаты ради экономии</li>
+          </ul>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Критерий</th>
+                  <th>Alibaba.com</th>
+                  <th>1688.com</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Язык интерфейса</strong></td>
+                  <td>Английский (+ другие языки)</td>
+                  <td>Только китайский</td>
+                </tr>
+                <tr>
+                  <td><strong>Минимальный заказ (MOQ)</strong></td>
+                  <td>Часто снижен для привлечения иностранцев</td>
+                  <td>Ориентирован на внутренний оптовый рынок</td>
+                </tr>
+                <tr>
+                  <td><strong>Защита покупателя</strong></td>
+                  <td><span class="tag-green">Trade Assurance</span> — полноценный арбитраж</td>
+                  <td>Базовый арбитраж платформы, слабее</td>
+                </tr>
+                <tr>
+                  <td><strong>Цена товара</strong></td>
+                  <td>Выше на 20–50% относительно 1688</td>
+                  <td><span class="tag-green">Ниже</span> — заводские внутренние цены</td>
+                </tr>
+                <tr>
+                  <td><strong>Верификация поставщиков</strong></td>
+                  <td>Gold Supplier, Verified Manufacturer</td>
+                  <td>Рейтинг и отзывы, менее строгий контроль</td>
+                </tr>
+                <tr>
+                  <td><strong>Работа без агента</strong></td>
+                  <td><span class="tag-green">Возможна</span> самостоятельно</td>
+                  <td><span class="tag-yellow">Рискованна</span> без агента</td>
+                </tr>
+                <tr>
+                  <td><strong>Оплата для россиян</strong></td>
+                  <td>Через Alibaba (доллары / евро)</td>
+                  <td>Alipay / WeChat Pay через агента</td>
+                </tr>
+                <tr>
+                  <td><strong>Поддержка на русском</strong></td>
+                  <td>Нет, но есть английский чат</td>
+                  <td>Нет</td>
+                </tr>
+                <tr>
+                  <td><strong>Отзывы и рейтинги</strong></td>
+                  <td>Развитая система, видна история</td>
+                  <td>Есть, но нужен опыт их читать</td>
+                </tr>
+                <tr>
+                  <td><strong>Рекомендация</strong></td>
+                  <td><span class="tag-green">Для начинающих</span> и небольших партий</td>
+                  <td><span class="tag-green">Для опытных</span> с агентом, крупные объёмы</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout article-callout--tip">
+            <p>💡 Оптимальная стратегия для растущего бизнеса: начинайте с Alibaba, найдите надёжного поставщика, убедитесь в качестве. Потом попробуйте найти его же на 1688 через агента — нередко это буквально та же фабрика, только дешевле.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Нужен агент в Китае или помощь с выбором платформы?</h3>
+            <p>Расскажите о вашем товаре и объёмах — подберём оптимальную схему закупки и, при необходимости, подключим проверенного агента из нашей сети.</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary btn--large">gorn.import@mail.ru →</a>
+          </div>
+
+        </article>
+
+        <!-- TOC sidebar -->
+        <aside class="article-toc reveal-up" style="--delay:.2s">
+          <h4>Содержание</h4>
+          <ol>
+            <li><a href="#intro">О платформах: Alibaba и 1688</a></li>
+            <li><a href="#alibaba">Alibaba.com и Trade Assurance</a></li>
+            <li><a href="#1688">1688.com: заводские цены</a></li>
+            <li><a href="#prices">Разница в ценах</a></li>
+            <li><a href="#moq">Минимальные заказы</a></li>
+            <li><a href="#safety">Безопасность сделки</a></li>
+            <li><a href="#howto">Алгоритм работы</a></li>
+            <li><a href="#when">Когда что выбрать</a></li>
+          </ol>
+          <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Нужна помощь с закупками?</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary" style="width:100%;justify-content:center;font-size:13px">Написать нам</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>Другие статьи</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Читайте также</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <a href="blog-supplier-check.html" class="service-item reveal-up">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Как проверить китайского поставщика</h3>
+            <p>7 методов, которые реально работают</p>
+          </div>
+        </a>
+        <a href="blog-payment-china.html" class="service-item reveal-up" style="--delay:.08s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Как платить поставщикам в Китае в 2026 году</h3>
+            <p>Рабочие схемы оплаты в условиях санкций</p>
+          </div>
+        </a>
+        <a href="blog-china-import-guide.html" class="service-item reveal-up" style="--delay:.16s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Импорт из Китая: полный гайд</h3>
+            <p>От поиска поставщика до получения груза на склад</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Статьи</h5>
+          <a href="blog-china-import-guide.html">Импорт из Китая: гайд</a>
+          <a href="blog-supplier-check.html">Проверка поставщика</a>
+          <a href="blog-alibaba-vs-1688.html">Alibaba vs 1688</a>
+          <a href="blog-payment-china.html">Оплата в Китай</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

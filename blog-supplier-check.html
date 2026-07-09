@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как проверить китайского поставщика: 7 методов — Gorn Import</title>
+  <meta name="description" content="7 рабочих методов проверки китайского поставщика перед сделкой: SAIC, Alibaba, бизнес-лицензия, видео-осмотр, пробный заказ, отзывы, агент в Китае. От ВЭД-эксперта Анны Горн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-hero { background: var(--navy); padding: 160px 0 80px; position: relative; overflow: hidden; }
+    .article-hero__pattern { position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px);pointer-events:none; }
+    .article-hero__red-bar { position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red); }
+    .article-hero__tag { display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:24px; }
+    .article-hero__title { font-family:var(--font-h);font-size:clamp(28px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px;max-width:800px; }
+    .article-hero__meta { display:flex;gap:24px;font-size:13px;color:rgba(255,255,255,.4);padding-top:32px;border-top:1px solid rgba(255,255,255,.1); }
+    .article-hero__meta strong { color:rgba(255,255,255,.7); }
+
+    .article-layout { display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start; }
+    .article-toc { position:sticky;top:100px;background:var(--surface);border-radius:8px;padding:28px;border:1px solid var(--border); }
+    .article-toc h4 { font-family:var(--font-h);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px; }
+    .article-toc ol { padding-left:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-toc ol li a { font-size:13px;color:var(--muted);transition:color .2s; }
+    .article-toc ol li a:hover { color:var(--red); }
+
+    .article-body { min-width:0; }
+    .article-body h2 { font-family:var(--font-h);font-size:26px;font-weight:800;color:var(--text);margin:56px 0 16px;padding-top:16px;border-top:2px solid var(--border2); }
+    .article-body h3 { font-family:var(--font-h);font-size:19px;font-weight:700;color:var(--text);margin:36px 0 12px; }
+    .article-body p { font-size:16px;line-height:1.8;color:#2d3a4a;margin-bottom:20px; }
+    .article-body ul,
+    .article-body ol { padding-left:24px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-body li { font-size:15px;line-height:1.7;color:#2d3a4a; }
+    .article-body strong { color:var(--text); }
+    .article-callout { background:var(--red-dim);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:20px 24px;margin:32px 0; }
+    .article-callout--tip { background:#f0faf4;border-left-color:#27ae60; }
+    .article-callout p { margin:0;color:var(--text);font-weight:500;font-size:15px; }
+    .article-table-wrap { overflow-x:auto;margin:32px 0; }
+    .article-table { width:100%;border-collapse:collapse;font-size:14px; }
+    .article-table th { background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-family:var(--font-h);font-weight:600;font-size:13px; }
+    .article-table td { padding:13px 16px;border-bottom:1px solid var(--border); }
+    .article-table tr:hover td { background:var(--surface); }
+    .step-block { display:flex;gap:20px;margin-bottom:28px;padding:24px;background:var(--surface);border-radius:8px;border:1px solid var(--border2); }
+    .step-block__num { font-family:var(--font-h);font-size:32px;font-weight:900;color:var(--red);opacity:.3;line-height:1;flex-shrink:0;width:48px; }
+    .step-block h3 { margin:0 0 8px;font-size:18px; }
+    .step-block p { margin:0;font-size:14px;color:var(--muted); }
+    .article-cta { background:var(--navy);border-radius:8px;padding:40px;margin:56px 0 0;text-align:center; }
+    .article-cta h3 { font-family:var(--font-h);font-size:22px;font-weight:800;color:#fff;margin-bottom:12px; }
+    .article-cta p { font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="blog.html">Блог</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero__pattern"></div>
+    <div class="article-hero__red-bar"></div>
+    <div class="container">
+      <div class="article-hero__tag reveal-up">
+        <a href="blog.html" style="color:var(--gold)">← Блог</a>
+        <span style="opacity:.4">·</span>
+        <span>Безопасность</span>
+      </div>
+      <h1 class="article-hero__title reveal-up" style="--delay:.1s">
+        Как проверить китайского поставщика: 7 методов, которые работают
+      </h1>
+      <div class="article-hero__meta reveal-up" style="--delay:.2s">
+        <span><strong>Автор:</strong> Анна Степанова</span>
+        <span><strong>Обновлено:</strong> Июнь 2026</span>
+        <span><strong>Время чтения:</strong> 12 минут</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-layout">
+
+        <article class="article-body reveal-up">
+
+          <p>Мошенничество со стороны китайских поставщиков — не миф и не редкость. По данным международных торговых платформ, каждый пятый новый импортёр сталкивается с серьёзными проблемами при первой сделке: брак, недопоставка, полное исчезновение «партнёра» после получения аванса. Хорошая новость: всех этих ситуаций можно избежать, если знать, как и что проверять ещё до перевода денег.</p>
+
+          <p>В этой статье я разберу 7 проверенных методов верификации поставщика — от бесплатных онлайн-инструментов до полноценного аудита с выездом. Каждый метод описан с конкретными шагами и на что обращать внимание.</p>
+
+          <div class="article-callout">
+            <p>⚠️ Важно: ни один метод проверки в одиночку не даёт 100% гарантии. Надёжная верификация — это комбинация минимум 3–4 методов из этого списка, подобранных под масштаб вашей сделки.</p>
+          </div>
+
+          <h2 id="why">Почему проверка поставщика критична</h2>
+
+          <p>Потери российских импортёров от недобросовестных китайских поставщиков ежегодно исчисляются сотнями миллионов рублей. Вот три основных сценария, с которыми я сталкиваюсь в своей практике:</p>
+
+          <ul>
+            <li><strong>Мошенничество с предоплатой.</strong> Поставщик получает аванс (нередко 30–100% стоимости заказа) и исчезает. Особенно распространено среди торговых посредников, которые выдают себя за производителей. Средняя сумма потери — от $5 000 до $80 000.</li>
+            <li><strong>Систематический брак.</strong> Образцы — идеального качества, серийная партия — принципиально другой уровень. Без инспекции на производстве это обнаруживается только на вашем складе, когда товар уже растаможен и оплачен.</li>
+            <li><strong>Невозврат предоплаты при срыве производства.</strong> Фабрика берёт заказ, не справляется с ним и тянет время месяцами. Вернуть деньги из Китая через суд — дорого, долго и непредсказуемо.</li>
+          </ul>
+
+          <p>По статистике платформы Alibaba, среди впервые зарегистрированных поставщиков без верификации Trade Assurance более 30% не выполняют условия первого заказа в полном объёме. Среди верифицированных Gold Supplier этот показатель падает до 8–12%. Но даже Gold Supplier — не абсолютная гарантия, а лишь один из фильтров.</p>
+
+          <div class="article-callout">
+            <p>⚠️ Практика показывает: чем крупнее первый заказ, который просит поставщик, тем выше вероятность проблем. Легитимный производитель спокойно работает с пробными партиями.</p>
+          </div>
+
+          <h2 id="method1">Метод 1: Верификация на Alibaba Gold Supplier и Trade Assurance</h2>
+
+          <div class="step-block">
+            <div class="step-block__num">01</div>
+            <div>
+              <h3>Gold Supplier и Trade Assurance — что это даёт</h3>
+              <p>Gold Supplier — платный статус на Alibaba, который требует прохождения верификации компании. Это не гарантия качества, но подтверждение, что компания реально существует и прошла базовую проверку данных. Trade Assurance — финансовая защита покупателя: если поставщик нарушает условия заказа по качеству или срокам, Alibaba может вернуть часть средств.</p>
+            </div>
+          </div>
+
+          <h3>Что проверять в профиле поставщика на Alibaba:</h3>
+          <ul>
+            <li><strong>Год регистрации на платформе</strong> — предпочтительно 3+ года активности</li>
+            <li><strong>Response Rate</strong> — выше 90% говорит об активной работе с клиентами</li>
+            <li><strong>Количество транзакций по Trade Assurance</strong> — чем больше, тем лучше история</li>
+            <li><strong>Отзывы покупателей</strong> — читайте негативные, они информативнее позитивных</li>
+            <li><strong>Верификация производства (Factory)</strong> vs. торговый посредник (Trading Company) — это принципиальное различие по ценообразованию и ответственности</li>
+            <li><strong>Сертификаты ISO, CE и другие</strong> — проверяйте реквизиты сертификата, а не только его наличие</li>
+          </ul>
+
+          <p>Важный нюанс: статус Gold Supplier покупается ежегодно — его наличие не означает, что компания проверялась в этом году. Смотрите дату последней верификации.</p>
+
+          <h2 id="method2">Метод 2: Проверка через SAIC и CNCA</h2>
+
+          <div class="step-block">
+            <div class="step-block__num">02</div>
+            <div>
+              <h3>Государственные реестры КНР — бесплатный и надёжный старт</h3>
+              <p>SAIC (State Administration for Industry and Commerce) — китайский аналог ФНС. Через национальный реестр компаний можно бесплатно проверить юридическое существование поставщика, его регистрационный номер, уставный капитал, юридический адрес и статус (действующая или ликвидированная). CNCA (Certification and Accreditation Administration) — реестр сертификатов соответствия.</p>
+            </div>
+          </div>
+
+          <h3>Как проверить поставщика через государственные реестры:</h3>
+          <ol>
+            <li>Запросите у поставщика полное официальное название компании на китайском языке (不是英文名称) и регистрационный номер (统一社会信用代码 — 18-значный код).</li>
+            <li>Зайдите на <strong>gsxt.samr.gov.cn</strong> (Национальная система публичного кредитного надзора) и введите название или регистрационный номер.</li>
+            <li>Проверьте: дату регистрации, уставный капитал, юридический адрес, имена учредителей и руководителей, статус компании.</li>
+            <li>Для проверки сертификатов (ISO, CE, CCC) используйте <strong>www.cnca.gov.cn</strong> — введите номер сертификата из документов поставщика.</li>
+          </ol>
+
+          <p>Красные флаги: уставный капитал менее 100 000 юаней для «производителя», регистрация менее года назад, адрес в жилом доме, несоответствие между названием в профиле и реестре.</p>
+
+          <h2 id="method3">Метод 3: Запрос бизнес-лицензии и её расшифровка</h2>
+
+          <div class="step-block">
+            <div class="step-block__num">03</div>
+            <div>
+              <h3>Бизнес-лицензия (营业执照) — обязательный документ</h3>
+              <p>Каждая законно работающая компания в Китае обязана иметь и предъявлять бизнес-лицензию. Отказ поставщика прислать этот документ — абсолютный красный флаг. Лицензия содержит всю ключевую информацию о компании и позволяет кросс-проверить данные через SAIC.</p>
+            </div>
+          </div>
+
+          <h3>Что читать в бизнес-лицензии:</h3>
+          <ul>
+            <li><strong>名称 (Míngchēng)</strong> — полное официальное название компании</li>
+            <li><strong>统一社会信用代码</strong> — 18-значный регистрационный номер (должен совпадать с данными в SAIC)</li>
+            <li><strong>注册资本 (Zhùcè zīběn)</strong> — уставный капитал</li>
+            <li><strong>住所 (Zhùsuǒ)</strong> — юридический адрес (сверьте с адресом производства)</li>
+            <li><strong>经营范围 (Jīngyíng fànwéi)</strong> — виды деятельности. Поставщик должен быть авторизован на производство именно вашего товара</li>
+            <li><strong>有效期 (Yǒuxiào qī)</strong> — срок действия лицензии (должна быть актуальной)</li>
+          </ul>
+
+          <p>Попросите цветной скан лицензии с красной печатью — чёрно-белые копии легче подделать. Если поставщик присылает только фото на телефон — попросите нотариально заверенную копию.</p>
+
+          <h2 id="method4">Метод 4: Видео-осмотр производства</h2>
+
+          <div class="step-block">
+            <div class="step-block__num">04</div>
+            <div>
+              <h3>Видеозвонок на фабрику — быстро и информативно</h3>
+              <p>Видео-осмотр производства через WeChat Video или Zoom занимает 30–60 минут и позволяет визуально убедиться в реальном существовании фабрики, оценить масштаб производства и увидеть товар вживую. Это не замена физическому аудиту, но отличный первый фильтр.</p>
+            </div>
+          </div>
+
+          <h3>Сценарий видео-осмотра: что смотреть и какие вопросы задавать:</h3>
+          <ul>
+            <li><strong>Попросите показать вывеску у входа</strong> — название должно совпадать с данными из лицензии и SAIC</li>
+            <li><strong>Производственный цех</strong> — работающие станки, сотрудники за работой, незавершённые изделия. «Пустой» цех в рабочее время — плохой знак</li>
+            <li><strong>Склад сырья и готовой продукции</strong> — оцените масштаб реального производства</li>
+            <li><strong>Образцы вашего товара</strong> — попросите показать вживую и сфотографировать рядом с линейкой</li>
+            <li><strong>Сертификаты на стенах</strong> — ISO, CE и другие часто вывешивают в переговорной</li>
+          </ul>
+
+          <h3>Вопросы, которые обязательно задать:</h3>
+          <ul>
+            <li>Сколько сотрудников на производстве и в офисе?</li>
+            <li>Какой минимальный заказ (MOQ) и почему такой объём?</li>
+            <li>Кто ваши другие крупные клиенты (хотя бы страны)?</li>
+            <li>Можете ли вы показать сертификаты CE/ISO прямо сейчас?</li>
+            <li>Какова загрузка производства сейчас — есть ли место под наш заказ?</li>
+          </ul>
+
+          <div class="article-callout--tip article-callout">
+            <p>Совет: проводите видеозвонок неожиданно — без предупреждения за несколько дней. Настоящее производство работает в штатном режиме. Поставщики, которым нужно «подготовиться» к показу фабрики, вызывают серьёзные вопросы.</p>
+          </div>
+
+          <h2 id="method5">Метод 5: Пробный заказ с инспекцией качества</h2>
+
+          <div class="step-block">
+            <div class="step-block__num">05</div>
+            <div>
+              <h3>Пробная партия + Pre-Shipment Inspection — самый надёжный метод</h3>
+              <p>Заказ небольшой пробной партии с последующей инспекцией качества перед отгрузкой — золотой стандарт верификации поставщика. Инспекцию проводят независимые компании (SGS, Bureau Veritas, Intertek, QIMA) или наши агенты в Китае. Стоимость: $250–500 за выезд инспектора.</p>
+            </div>
+          </div>
+
+          <h3>Как организовать пробный заказ правильно:</h3>
+          <ol>
+            <li><strong>Минимальный объём</strong> — договоритесь на партию 20–50% от обычного MOQ. Нормальный поставщик соглашается на меньший объём за немного более высокую цену.</li>
+            <li><strong>Детальные технические требования</strong> — опишите в письменном виде всё: материалы, размеры, цвета, допустимые отклонения, маркировку, упаковку.</li>
+            <li><strong>Оговорите право на инспекцию</strong> до отгрузки — это должно быть в контракте или хотя бы в переписке.</li>
+            <li><strong>Закажите Pre-Shipment Inspection</strong> — инспектор проверит процент брака по AQL-стандарту, соответствие спецификациям, маркировку и упаковку.</li>
+            <li><strong>Оплата</strong> — пробный заказ можно оплатить через Trade Assurance или PayPal (при небольших суммах), это даёт дополнительную защиту.</li>
+          </ol>
+
+          <h2 id="method6">Метод 6: Поиск отзывов в WeChat и на форумах</h2>
+
+          <div class="step-block">
+            <div class="step-block__num">06</div>
+            <div>
+              <h3>Репутация поставщика в профессиональном сообществе</h3>
+              <p>Отзывы на Alibaba редактируются и отфильтровываются. Реальный опыт других импортёров ищите в WeChat-группах, на форумах ВЭД-специалистов и в профессиональных сообществах. Этот метод бесплатный, но требует времени и нетворкинга.</p>
+            </div>
+          </div>
+
+          <h3>Где искать независимые отзывы о поставщиках:</h3>
+          <ul>
+            <li><strong>WeChat-группы</strong> по вашей отрасли — попросите поделиться опытом работы с конкретной фабрикой. Название группы ищите через знакомых ВЭД-специалистов или агентов.</li>
+            <li><strong>Форум ВЭД на biz.ua и Russia-China.ru</strong> — старые, но живые тематические ветки с реальными историями.</li>
+            <li><strong>Телеграм-каналы</strong> российских импортёров — поищите по хэштегу #поставщик или #Китай + название товарной категории.</li>
+            <li><strong>1688.com — раздел отзывов</strong> (评价) — если поставщик работает и на внутреннем рынке, там будут отзывы от китайских покупателей.</li>
+            <li><strong>Google: "[Название компании] + scam/review/complaint"</strong> — простой, но часто эффективный поиск на английском языке.</li>
+          </ul>
+
+          <p>Если поставщик прислал контакты других своих клиентов для рекомендаций — обязательно свяжитесь с ними напрямую, но не через поставщика. Просите реальный WeChat или email, не «форвардируйте» вопросы через посредника.</p>
+
+          <h2 id="method7">Метод 7: Проверка через агента в Китае</h2>
+
+          <div class="step-block">
+            <div class="step-block__num">07</div>
+            <div>
+              <h3>Агент на месте — самый комплексный вариант</h3>
+              <p>Наличие проверенного агента в Китае позволяет провести физический аудит производства, верифицировать документы «живьём», пообщаться с менеджерами на китайском языке и оценить реальный уровень организации работы. Это незаменимо при крупных сделках (от $20 000) и при работе с новым производителем.</p>
+            </div>
+          </div>
+
+          <h3>Что включает проверка через агента:</h3>
+          <ul>
+            <li>Физический выезд на производство с фото- и видеоотчётом</li>
+            <li>Проверка всех документов компании в оригинале</li>
+            <li>Переговоры с руководством на китайском — оценка компетентности и серьёзности</li>
+            <li>Оценка реальных производственных мощностей vs. заявленных</li>
+            <li>Проверка складов сырья — есть ли материалы для выполнения вашего заказа</li>
+            <li>Опрос рабочих — сколько работает людей, как давно, какие заказы сейчас в производстве</li>
+          </ul>
+
+          <p>В рамках нашего сервиса <strong>Gorn Import</strong> мы организуем комплексную проверку поставщиков через партнёров в ключевых производственных регионах Китая: Гуандун, Чжэцзян, Цзянсу, Шаньдун. Стоимость и сроки зависят от региона и объёма проверки.</p>
+
+          <div class="article-callout--tip article-callout">
+            <p>Совет: при первой серьёзной сделке с новым поставщиком стоимость агентской проверки ($300–800) — это страховой взнос, который защищает депозит в 10–100 раз большего размера. Экономия здесь нерациональна.</p>
+          </div>
+
+          <h2 id="redflags">Красные флаги: когда точно не стоит работать с поставщиком</h2>
+
+          <p>Даже если поставщик кажется надёжным, следующие сигналы должны остановить вас до заключения сделки:</p>
+
+          <ul>
+            <li><strong>Отказывается предоставлять бизнес-лицензию</strong> или юридическое название компании на китайском</li>
+            <li><strong>Требует 100% предоплаты</strong> на крупный первый заказ без какой-либо защиты сделки</li>
+            <li><strong>Не может показать производство</strong> даже по видео и придумывает причины для отказа</li>
+            <li><strong>Данные из SAIC не совпадают</strong> с тем, что поставщик о себе говорит</li>
+            <li><strong>Цена значительно ниже рынка</strong> — без внятного объяснения. Настоящие производители не демпингуют без причины</li>
+            <li><strong>Просит перевести деньги на личный счёт физлица</strong> вместо корпоративного счёта компании</li>
+            <li><strong>Зарегистрирован менее года назад</strong> и уже предлагает крупные объёмы</li>
+            <li><strong>Отказывается от инспекции перед отгрузкой</strong> — «мы сами гарантируем качество»</li>
+            <li><strong>Слишком давит</strong> на срочность сделки — «цена действует только сегодня», «склад заканчивается»</li>
+            <li><strong>Образцы доставляются не с того адреса</strong>, что указан в документах компании</li>
+          </ul>
+
+          <div class="article-callout">
+            <p>⚠️ Правило одного красного флага: если вы обнаружили хотя бы один из перечисленных признаков — не продолжайте переговоры, пока поставщик не даст убедительное объяснение. Два красных флага = прекращение переговоров без исключений.</p>
+          </div>
+
+          <h3>Сравнительная таблица методов верификации</h3>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Метод</th>
+                  <th>Стоимость</th>
+                  <th>Время</th>
+                  <th>Надёжность</th>
+                  <th>Лучше для</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alibaba Gold Supplier / Trade Assurance</td>
+                  <td>Бесплатно</td>
+                  <td>15–30 мин</td>
+                  <td>Низкая–средняя</td>
+                  <td>Первичный отбор</td>
+                </tr>
+                <tr>
+                  <td>SAIC / государственный реестр</td>
+                  <td>Бесплатно</td>
+                  <td>30–60 мин</td>
+                  <td>Средняя</td>
+                  <td>Проверка юрлица</td>
+                </tr>
+                <tr>
+                  <td>Бизнес-лицензия + расшифровка</td>
+                  <td>Бесплатно</td>
+                  <td>30 мин + перевод</td>
+                  <td>Средняя</td>
+                  <td>Проверка документов</td>
+                </tr>
+                <tr>
+                  <td>Видео-осмотр производства</td>
+                  <td>Бесплатно</td>
+                  <td>30–60 мин</td>
+                  <td>Средняя</td>
+                  <td>Визуальная оценка</td>
+                </tr>
+                <tr>
+                  <td>Пробный заказ + Pre-Shipment Inspection</td>
+                  <td>$250–500 + партия</td>
+                  <td>2–6 недель</td>
+                  <td>Высокая</td>
+                  <td>Проверка качества</td>
+                </tr>
+                <tr>
+                  <td>Отзывы WeChat / форумы</td>
+                  <td>Бесплатно</td>
+                  <td>1–3 дня</td>
+                  <td>Средняя</td>
+                  <td>Репутационная проверка</td>
+                </tr>
+                <tr>
+                  <td>Агент в Китае (физический аудит)</td>
+                  <td>$300–800</td>
+                  <td>3–7 дней</td>
+                  <td>Очень высокая</td>
+                  <td>Крупные сделки от $20 000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Итого: рекомендуемые комбинации методов по размеру сделки</h3>
+
+          <ul>
+            <li><strong>До $5 000:</strong> Alibaba Gold Supplier + SAIC + видеозвонок + пробный заказ</li>
+            <li><strong>$5 000–20 000:</strong> все выше + бизнес-лицензия + Pre-Shipment Inspection</li>
+            <li><strong>Свыше $20 000:</strong> все выше + физический аудит через агента в Китае</li>
+          </ul>
+
+          <div class="article-cta">
+            <h3>Нужна помощь с проверкой поставщика?</h3>
+            <p>Мы проводим комплексную верификацию китайских поставщиков — от проверки документов до выезда агента на производство. Расскажите о вашей ситуации, разберём вместе.</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary btn--large">gorn.import@mail.ru →</a>
+          </div>
+
+        </article>
+
+        <!-- TOC sidebar -->
+        <aside class="article-toc reveal-up" style="--delay:.2s">
+          <h4>Содержание</h4>
+          <ol>
+            <li><a href="#why">Почему проверка критична</a></li>
+            <li><a href="#method1">Alibaba Gold Supplier</a></li>
+            <li><a href="#method2">Реестры SAIC и CNCA</a></li>
+            <li><a href="#method3">Бизнес-лицензия</a></li>
+            <li><a href="#method4">Видео-осмотр производства</a></li>
+            <li><a href="#method5">Пробный заказ и инспекция</a></li>
+            <li><a href="#method6">Отзывы в WeChat и форумах</a></li>
+            <li><a href="#method7">Агент в Китае</a></li>
+            <li><a href="#redflags">Красные флаги</a></li>
+          </ol>
+          <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Нужна проверка поставщика?</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary" style="width:100%;justify-content:center;font-size:13px">Написать нам</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>Другие статьи</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Читайте также</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <a href="blog-china-import-guide.html" class="service-item reveal-up">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Импорт из Китая: полный гайд</h3>
+            <p>Пошаговая инструкция для малого бизнеса 2025–2026</p>
+          </div>
+        </a>
+        <a href="blog-logistics-routes.html" class="service-item reveal-up" style="--delay:.08s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Маршруты доставки из Китая 2026</h3>
+            <p>Море, авто, ж/д, авиа — сравнение</p>
+          </div>
+        </a>
+        <a href="blog-customs-duty.html" class="service-item reveal-up" style="--delay:.16s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Таможенные пошлины: как считать</h3>
+            <p>ТН ВЭД, ставки, оптимизация</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Статьи</h5>
+          <a href="blog-china-import-guide.html">Импорт из Китая: гайд</a>
+          <a href="blog-supplier-check.html">Проверка поставщика</a>
+          <a href="blog-logistics-routes.html">Маршруты доставки</a>
+          <a href="blog-customs-duty.html">Таможенные пошлины</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

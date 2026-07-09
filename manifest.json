@@ -1,0 +1,14 @@
+{
+  "name": "Gorn Import — ВЭД эксперт",
+  "short_name": "Gorn Import",
+  "description": "Анна Горн — эксперт по импорту из Китая и ВЭД. Официальный советник Российско-Китайской торговой палаты.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D2137",
+  "theme_color": "#0D2137",
+  "lang": "ru",
+  "icons": [
+    { "src": "anna.jpg", "sizes": "192x192", "type": "image/jpeg" },
+    { "src": "anna.jpg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}

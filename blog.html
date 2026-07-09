@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог об импорте из Китая — Gorn Import</title>
+  <meta name="description" content="Экспертные статьи об импорте из Китая, ВЭД, таможенном оформлении и поиске поставщиков. Практические советы от Анны Горн — официального советника Российско-Китайской палаты.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .blog-hero { background: var(--navy); padding: 160px 0 80px; position: relative; overflow: hidden; }
+    .blog-hero__pattern { position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px);pointer-events:none; }
+    .blog-hero__red-bar { position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red); }
+
+    .blog-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+    .blog-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .3s, transform .3s; }
+    .blog-card:hover { box-shadow: 0 16px 48px rgba(13,33,55,.12); transform: translateY(-4px); }
+    .blog-card--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; }
+    .blog-card__cover { background: var(--navy); min-height: 200px; overflow: hidden; position: relative; }
+    .blog-card--featured .blog-card__cover { min-height: 320px; }
+    .blog-card__cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+    .blog-card:hover .blog-card__cover img { transform: scale(1.04); }
+    .blog-card__cover-num { display: none; }
+    .blog-card__cover-icon { display: none; }
+    .blog-card__body { padding: 32px; flex: 1; display: flex; flex-direction: column; }
+    .blog-card__tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--red); background: var(--red-dim); border-radius: 3px; padding: 3px 8px; margin-bottom: 16px; }
+    .blog-card__title { font-family: var(--font-h); font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.25; margin-bottom: 12px; letter-spacing: -.01em; }
+    .blog-card--featured .blog-card__title { font-size: 28px; }
+    .blog-card__excerpt { font-size: 14px; color: var(--muted); line-height: 1.65; flex: 1; }
+    .blog-card__meta { display: flex; align-items: center; gap: 16px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border2); font-size: 12px; color: var(--muted2); }
+    .blog-card__meta-author { font-weight: 600; color: var(--muted); }
+    .blog-card__read { font-weight: 600; color: var(--red); font-size: 13px; margin-top: 20px; display: inline-flex; align-items: center; gap: 6px; transition: gap .2s; }
+    .blog-card:hover .blog-card__read { gap: 10px; }
+
+    .article-hero { background: var(--navy); padding: 160px 0 80px; position: relative; }
+    .article-body { max-width: 760px; margin: 0 auto; }
+    .article-body h2 { font-family: var(--font-h); font-size: 24px; font-weight: 700; color: var(--text); margin: 48px 0 16px; }
+    .article-body p { font-size: 16px; line-height: 1.75; color: #334; margin-bottom: 20px; }
+    .article-body ul { padding-left: 24px; margin-bottom: 20px; }
+    .article-body ul li { font-size: 15px; line-height: 1.7; color: #334; margin-bottom: 8px; }
+    .article-callout { background: var(--red-dim); border-left: 3px solid var(--red); border-radius: 0 6px 6px 0; padding: 20px 24px; margin: 32px 0; }
+    .article-callout p { margin: 0; color: var(--text); font-weight: 500; }
+    .article-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 14px; }
+    .article-table th { background: var(--navy); color: #fff; padding: 12px 16px; text-align: left; font-family: var(--font-h); font-weight: 600; }
+    .article-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+    .article-table tr:hover td { background: var(--surface); }
+
+    .blog-cta { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 40px 48px; margin: 64px 0 0; display: flex; align-items: center; gap: 40px; }
+    .blog-cta__text h3 { font-family: var(--font-h); font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .blog-cta__text p { font-size: 14px; color: var(--muted); margin: 0; }
+
+    @media (max-width: 900px) {
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .blog-card--featured { grid-template-columns: 1fr; }
+      .blog-card--featured .blog-card__cover { min-height: 200px; }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-cta { flex-direction: column; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="blog.html">Блог</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="blog-hero">
+    <div class="blog-hero__pattern"></div>
+    <div class="blog-hero__red-bar"></div>
+    <div class="container">
+      <div class="page-hero__eyebrow reveal-up">
+        <span class="page-hero__eyebrow-line"></span>
+        Экспертный блог
+      </div>
+      <h1 class="page-hero__title">
+        <div class="line"><span>Всё об импорте</span></div>
+        <div class="line"><span>из <span>Китая</span> и&nbsp;не&nbsp;только</span></div>
+      </h1>
+      <p class="page-hero__sub reveal-up" style="--delay:.25s">
+        Практические статьи от ВЭД-эксперта: как найти поставщика, пройти таможню, не потерять деньги на логистике и выстроить выгодный импорт.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <!-- Featured -->
+        <a href="blog-china-import-guide.html" class="blog-card blog-card--featured reveal-up">
+          <div class="blog-card__cover">
+            <img src="blog-images/blog-1-import-guide.jpg" alt="Как импортировать из Китая">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Гайд</span>
+            <h2 class="blog-card__title">Как импортировать из Китая в 2025–2026 году: полный гайд для малого бизнеса</h2>
+            <p class="blog-card__excerpt">Пошаговая инструкция: от выбора товара и поиска поставщика до таможенного оформления и доставки на ваш склад. Разбираем актуальные маршруты, платёжные инструменты и типичные ошибки.</p>
+            <span class="blog-card__read">Читать статью →</span>
+            <div class="blog-card__meta">
+              <span class="blog-card__meta-author">Анна Степанова</span>
+              <span>·</span>
+              <span>18 мин чтения</span>
+              <span>·</span>
+              <span>Июль 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="blog-supplier-check.html" class="blog-card reveal-up" style="--delay:.08s">
+          <div class="blog-card__cover" style="min-height:180px">
+            <img src="blog-images/blog-2-supplier-verify.jpg" alt="Проверка поставщика">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Безопасность</span>
+            <h2 class="blog-card__title">Как проверить китайского поставщика: 7 методов, которые работают</h2>
+            <p class="blog-card__excerpt">Alibaba, 1688, фабричный аудит, юридическая проверка через SAIC. Объясняем, что реально защищает от мошенников и брака, а что только создаёт иллюзию безопасности.</p>
+            <span class="blog-card__read">Читать →</span>
+            <div class="blog-card__meta">
+              <span class="blog-card__meta-author">Анна Степанова</span>
+              <span>·</span>
+              <span>12 мин</span>
+              <span>·</span>
+              <span>Июнь 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="blog-logistics-routes.html" class="blog-card reveal-up" style="--delay:.16s">
+          <div class="blog-card__cover" style="min-height:180px">
+            <img src="blog-images/blog-3-logistics.jpg" alt="Логистика из Китая">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Логистика</span>
+            <h2 class="blog-card__title">Маршруты доставки из Китая в Россию в 2026 году: что работает</h2>
+            <p class="blog-card__excerpt">Актуальные пути: море через Владивосток, авто через Казахстан, авиа, ж/д. Сравниваем стоимость, сроки и риски. Какой маршрут выбрать для вашего товара.</p>
+            <span class="blog-card__read">Читать →</span>
+            <div class="blog-card__meta">
+              <span class="blog-card__meta-author">Анна Степанова</span>
+              <span>·</span>
+              <span>10 мин</span>
+              <span>·</span>
+              <span>Июнь 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 4 -->
+        <a href="blog-customs-duty.html" class="blog-card reveal-up" style="--delay:.08s">
+          <div class="blog-card__cover" style="min-height:180px">
+            <img src="blog-images/blog-4-customs.jpg" alt="Таможенные пошлины">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Таможня</span>
+            <h2 class="blog-card__title">Таможенные пошлины при импорте из Китая: как считать и как оптимизировать</h2>
+            <p class="blog-card__excerpt">Классификация товаров по ТН ВЭД, ставки ввозных пошлин, НДС, акцизы. Как легально снизить таможенную нагрузку и не получить претензий от ФТС.</p>
+            <span class="blog-card__read">Читать →</span>
+            <div class="blog-card__meta">
+              <span class="blog-card__meta-author">Анна Степанова</span>
+              <span>·</span>
+              <span>14 мин</span>
+              <span>·</span>
+              <span>Май 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 5 -->
+        <a href="blog-payment-china.html" class="blog-card reveal-up" style="--delay:.16s">
+          <div class="blog-card__cover" style="min-height:180px">
+            <img src="blog-images/blog-5-payments.jpg" alt="Оплата китайским поставщикам">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Расчёты</span>
+            <h2 class="blog-card__title">Как платить китайским поставщикам в 2026 году: Swift, юань, криптовалюта</h2>
+            <p class="blog-card__excerpt">Какие платёжные инструменты работают сегодня, где больше комиссия, как защититься от потери платежа. Реальные схемы оплаты, которые используют наши клиенты.</p>
+            <span class="blog-card__read">Читать →</span>
+            <div class="blog-card__meta">
+              <span class="blog-card__meta-author">Анна Степанова</span>
+              <span>·</span>
+              <span>9 мин</span>
+              <span>·</span>
+              <span>Май 2026</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article 6 -->
+        <a href="blog-alibaba-vs-1688.html" class="blog-card reveal-up" style="--delay:.24s">
+          <div class="blog-card__cover" style="min-height:180px">
+            <img src="blog-images/blog-6-alibaba-vs-1688.jpg" alt="Alibaba vs 1688">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Площадки</span>
+            <h2 class="blog-card__title">Alibaba vs 1688: где искать поставщиков и в чём разница для российского бизнеса</h2>
+            <p class="blog-card__excerpt">Сравниваем две главные B2B-площадки Китая: цены, верификация поставщиков, защита сделки, минимальные заказы. Когда использовать каждую и как не ошибиться.</p>
+            <span class="blog-card__read">Читать →</span>
+            <div class="blog-card__meta">
+              <span class="blog-card__meta-author">Анна Степанова</span>
+              <span>·</span>
+              <span>11 мин</span>
+              <span>·</span>
+              <span>Апрель 2026</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- CTA блок внутри блога -->
+      <div class="blog-cta reveal-up">
+        <div class="blog-cta__text">
+          <h3>Не нашли ответ на свой вопрос?</h3>
+          <p>Напишите нам — разберём вашу ситуацию лично. Первая консультация бесплатна.</p>
+        </div>
+        <a href="mailto:gorn.import@mail.ru" class="btn btn--primary" style="flex-shrink:0">gorn.import@mail.ru →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2 class="cta-banner__title reveal-up">Теория — это хорошо.<br>Результат — лучше.</h2>
+        <p class="cta-banner__sub reveal-up" style="--delay:.1s">Обсудим вашу конкретную задачу на бесплатной консультации</p>
+        <a href="contact.html" class="btn btn--navy btn--large reveal-up" style="--delay:.2s">Записаться →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Статьи</h5>
+          <a href="blog-china-import-guide.html">Импорт из Китая: гайд</a>
+          <a href="blog-supplier-check.html">Проверка поставщика</a>
+          <a href="blog-logistics-routes.html">Маршруты доставки</a>
+          <a href="blog-customs-duty.html">Таможенные пошлины</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

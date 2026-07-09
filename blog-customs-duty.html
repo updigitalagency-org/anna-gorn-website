@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таможенные пошлины при импорте из Китая: как считать и оптимизировать — Gorn Import</title>
+  <meta name="description" content="Полное руководство по таможенным платежам при импорте из Китая: ТН ВЭД, ставки пошлин, расчёт таможенной стоимости, НДС, легальная оптимизация. От ВЭД-эксперта Анны Горн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-hero { background: var(--navy); padding: 160px 0 80px; position: relative; overflow: hidden; }
+    .article-hero__pattern { position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px);pointer-events:none; }
+    .article-hero__red-bar { position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red); }
+    .article-hero__tag { display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:24px; }
+    .article-hero__title { font-family:var(--font-h);font-size:clamp(28px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px;max-width:800px; }
+    .article-hero__meta { display:flex;gap:24px;font-size:13px;color:rgba(255,255,255,.4);padding-top:32px;border-top:1px solid rgba(255,255,255,.1); }
+    .article-hero__meta strong { color:rgba(255,255,255,.7); }
+
+    .article-layout { display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start; }
+    .article-toc { position:sticky;top:100px;background:var(--surface);border-radius:8px;padding:28px;border:1px solid var(--border); }
+    .article-toc h4 { font-family:var(--font-h);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px; }
+    .article-toc ol { padding-left:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-toc ol li a { font-size:13px;color:var(--muted);transition:color .2s; }
+    .article-toc ol li a:hover { color:var(--red); }
+
+    .article-body { min-width:0; }
+    .article-body h2 { font-family:var(--font-h);font-size:26px;font-weight:800;color:var(--text);margin:56px 0 16px;padding-top:16px;border-top:2px solid var(--border2); }
+    .article-body h3 { font-family:var(--font-h);font-size:19px;font-weight:700;color:var(--text);margin:36px 0 12px; }
+    .article-body p { font-size:16px;line-height:1.8;color:#2d3a4a;margin-bottom:20px; }
+    .article-body ul,
+    .article-body ol { padding-left:24px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-body li { font-size:15px;line-height:1.7;color:#2d3a4a; }
+    .article-body strong { color:var(--text); }
+    .article-callout { background:var(--red-dim);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:20px 24px;margin:32px 0; }
+    .article-callout p { margin:0;color:var(--text);font-weight:500;font-size:15px; }
+    .article-callout--warning { background:#fff8e1;border-left-color:#f59e0b; }
+    .article-callout--warning p { color:#92400e; }
+    .article-callout--info { background:#e0f2fe;border-left-color:#0284c7; }
+    .article-callout--info p { color:#0c4a6e; }
+    .article-table-wrap { overflow-x:auto;margin:32px 0; }
+    .article-table { width:100%;border-collapse:collapse;font-size:14px; }
+    .article-table th { background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-family:var(--font-h);font-weight:600;font-size:13px; }
+    .article-table td { padding:13px 16px;border-bottom:1px solid var(--border); }
+    .article-table tr:hover td { background:var(--surface); }
+    .article-table .td-code { font-family:monospace;font-size:13px;color:var(--muted); }
+    .article-table .td-rate { font-weight:700;color:var(--red); }
+    .step-block { display:flex;gap:20px;margin-bottom:28px;padding:24px;background:var(--surface);border-radius:8px;border:1px solid var(--border2); }
+    .step-block__num { font-family:var(--font-h);font-size:32px;font-weight:900;color:var(--red);opacity:.3;line-height:1;flex-shrink:0;width:48px; }
+    .step-block h3 { margin:0 0 8px;font-size:18px; }
+    .step-block p { margin:0;font-size:14px;color:var(--muted); }
+    .formula-block { background:var(--navy);color:#fff;border-radius:8px;padding:28px 32px;margin:32px 0;font-family:monospace;font-size:15px;line-height:2; }
+    .formula-block .formula-line { display:flex;gap:16px;align-items:baseline; }
+    .formula-block .formula-label { color:rgba(255,255,255,.45);font-size:12px;font-family:var(--font-body);min-width:180px;flex-shrink:0; }
+    .formula-block .formula-val { color:#ffd700; }
+    .formula-block .formula-result { border-top:1px solid rgba(255,255,255,.2);margin-top:12px;padding-top:12px;color:var(--red);font-weight:700; }
+    .article-cta { background:var(--navy);border-radius:8px;padding:40px;margin:56px 0 0;text-align:center; }
+    .article-cta h3 { font-family:var(--font-h);font-size:22px;font-weight:800;color:#fff;margin-bottom:12px; }
+    .article-cta p { font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="blog.html">Блог</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero__pattern"></div>
+    <div class="article-hero__red-bar"></div>
+    <div class="container">
+      <div class="article-hero__tag reveal-up">
+        <a href="blog.html" style="color:var(--gold)">← Блог</a>
+        <span style="opacity:.4">·</span>
+        <span>Таможня</span>
+      </div>
+      <h1 class="article-hero__title reveal-up" style="--delay:.1s">
+        Таможенные пошлины при импорте из Китая: как считать и&nbsp;как оптимизировать
+      </h1>
+      <div class="article-hero__meta reveal-up" style="--delay:.2s">
+        <span><strong>Автор:</strong> Анна Степанова</span>
+        <span><strong>Обновлено:</strong> Май 2026</span>
+        <span><strong>Время чтения:</strong> 14 минут</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-layout">
+
+        <article class="article-body reveal-up">
+
+          <p>Таможенные платежи — это то, что большинство импортёров считает «на глазок» или вообще узнаёт уже на таможенном посту. Результат предсказуем: кассовые разрывы, задержки груза, штрафы и неприятные разговоры с проверяющими. В этой статье я разберу механику таможенных платежей от основ до реального кейса с оптимизацией пошлины с 15% до 5%.</p>
+
+          <div class="article-callout article-callout--info">
+            <p>Статья актуальна для импорта в рамках ЕАЭС (Россия, Беларусь, Казахстан, Армения, Кыргызстан). Ставки приведены по Единому таможенному тарифу ЕАЭС, действующему в 2026 году.</p>
+          </div>
+
+          <h2 id="basics">Основы: что входит в таможенные платежи</h2>
+
+          <p>Когда говорят «заплатить таможню», имеют в виду не один платёж, а несколько обязательных составляющих. Важно понимать каждую, потому что они считаются по-разному и по-разному оптимизируются.</p>
+
+          <h3>Из чего складываются таможенные платежи:</h3>
+          <ul>
+            <li><strong>Ввозная таможенная пошлина</strong> — основной платёж, ставка зависит от кода ТН ВЭД. Может быть адвалорной (% от стоимости), специфической (фиксированная сумма за единицу) или комбинированной.</li>
+            <li><strong>НДС при ввозе</strong> — 0%, 10% или 20% в зависимости от категории товара. Начисляется на таможенную стоимость + пошлину + акциз.</li>
+            <li><strong>Акцизный налог</strong> — только для подакцизных товаров (алкоголь, табак, автомобили, топливо). Большинство товаров из Китая акцизом не облагается.</li>
+            <li><strong>Таможенные сборы за оформление</strong> — фиксированные платежи за таможенное декларирование. Зависят от таможенной стоимости товара, в 2026 году варьируются от 775 до 30 000 ₽ за декларацию.</li>
+          </ul>
+
+          <div class="article-callout">
+            <p>Ключевая формула: <strong>ТС × (пошлина% + НДС% × (1 + пошлина%)) + акциз + сборы</strong>. Не пугайтесь — ниже мы разберём это на конкретных цифрах.</p>
+          </div>
+
+          <h2 id="tnved">ТН ВЭД: как работает классификация и почему это важно</h2>
+
+          <p>ТН ВЭД — Товарная Номенклатура Внешнеэкономической Деятельности. Это 10-значный код, который определяет абсолютно всё: ставку пошлины, применимость льгот, необходимость сертификатов и разрешений. Один и тот же физический товар под разными кодами может облагаться пошлиной в 0% или в 20%.</p>
+
+          <h3>Структура кода ТН ВЭД:</h3>
+          <ul>
+            <li><strong>Первые 2 цифры</strong> — группа (например, 85 — электрические машины и оборудование)</li>
+            <li><strong>3–4 цифры</strong> — позиция (8517 — телефонные аппараты)</li>
+            <li><strong>5–6 цифры</strong> — субпозиция (851712 — смартфоны)</li>
+            <li><strong>7–8 цифры</strong> — подсубпозиция по ТН ВЭД ЕАЭС</li>
+            <li><strong>9–10 цифры</strong> — национальный уровень детализации России</li>
+          </ul>
+
+          <p>Пример: беспроводные наушники могут быть классифицированы как:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Код ТН ВЭД</th>
+                  <th>Описание</th>
+                  <th>Ставка пошлины</th>
+                  <th>НДС</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-code">8518 30 950 0</td>
+                  <td>Наушники (headphones), прочие</td>
+                  <td class="td-rate">10%</td>
+                  <td>20%</td>
+                </tr>
+                <tr>
+                  <td class="td-code">8517 62 000 0</td>
+                  <td>Приёмная аппаратура для радиотелефонной связи</td>
+                  <td class="td-rate">0%</td>
+                  <td>20%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Разница в 10% пошлины только за счёт классификации — это реальные деньги на любом объёме. Именно поэтому правильный выбор кода ТН ВЭД является первым инструментом оптимизации.</p>
+
+          <div class="article-callout article-callout--warning">
+            <p>Таможня вправе самостоятельно переклассифицировать товар, если декларант указал неверный код — и доначислить пошлину за весь груз плюс штраф. Неверная классификация — одно из самых частых оснований для административного дела по ст. 16.2 КоАП РФ.</p>
+          </div>
+
+          <h2 id="rates">Ставки пошлин: откуда брать актуальные данные</h2>
+
+          <p>Единый таможенный тариф ЕАЭС регулярно обновляется — решения Совета Евразийской экономической комиссии выходят несколько раз в год. Пользоваться устаревшими справочниками опасно. Актуальные ставки нужно искать в официальных источниках.</p>
+
+          <h3>Официальные источники ставок:</h3>
+          <ul>
+            <li><strong>base.garant.ru / consultant.ru</strong> — актуальный текст ЕТТ ЕАЭС с удобным поиском по коду</li>
+            <li><strong>Портал ФТС России (customs.gov.ru)</strong> — калькулятор таможенных платежей</li>
+            <li><strong>TKS.ru</strong> — профессиональный справочник участника ВЭД</li>
+            <li><strong>Решения ЕЭК</strong> — на сайте eurasiancommission.org публикуются все изменения тарифов</li>
+          </ul>
+
+          <h3>Ставки пошлин на популярные категории товаров из Китая (2026):</h3>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Категория товара</th>
+                  <th>Пример кода ТН ВЭД</th>
+                  <th>Ставка пошлины</th>
+                  <th>НДС</th>
+                  <th>Примечание</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Смартфоны</td>
+                  <td class="td-code">8517 13 000 0</td>
+                  <td class="td-rate">0%</td>
+                  <td>20%</td>
+                  <td>Нулевая ставка по решению ЕЭК</td>
+                </tr>
+                <tr>
+                  <td>Ноутбуки, планшеты</td>
+                  <td class="td-code">8471 30 000 0</td>
+                  <td class="td-rate">0%</td>
+                  <td>20%</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Наушники, колонки</td>
+                  <td class="td-code">8518 30 950 0</td>
+                  <td class="td-rate">10%</td>
+                  <td>20%</td>
+                  <td>Зависит от классификации</td>
+                </tr>
+                <tr>
+                  <td>Одежда (верхняя)</td>
+                  <td class="td-code">6201 40 000 0</td>
+                  <td class="td-rate">14,4%, мин €3,25/кг</td>
+                  <td>20%</td>
+                  <td>Комбинированная ставка</td>
+                </tr>
+                <tr>
+                  <td>Трикотаж, нижнее бельё</td>
+                  <td class="td-code">6108 21 000 0</td>
+                  <td class="td-rate">12%, мин €1,5/кг</td>
+                  <td>20%</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Обувь кожаная</td>
+                  <td class="td-code">6403 99 960 0</td>
+                  <td class="td-rate">10%, мин €1,8/пара</td>
+                  <td>20%</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Промышленные станки</td>
+                  <td class="td-code">8457 10 100 0</td>
+                  <td class="td-rate">0%</td>
+                  <td>20%</td>
+                  <td>Производственное оборудование</td>
+                </tr>
+                <tr>
+                  <td>Электродвигатели</td>
+                  <td class="td-code">8501 52 200 0</td>
+                  <td class="td-rate">5%</td>
+                  <td>20%</td>
+                  <td>Зависит от мощности</td>
+                </tr>
+                <tr>
+                  <td>Детские игрушки</td>
+                  <td class="td-code">9503 00 950 0</td>
+                  <td class="td-rate">0%</td>
+                  <td>10%</td>
+                  <td>Льготный НДС на детские товары</td>
+                </tr>
+                <tr>
+                  <td>Продукты питания (чай)</td>
+                  <td class="td-code">0902 10 000 0</td>
+                  <td class="td-rate">12,5%</td>
+                  <td>10%</td>
+                  <td>Льготный НДС на продовольствие</td>
+                </tr>
+                <tr>
+                  <td>Мебель</td>
+                  <td class="td-code">9403 30 110 0</td>
+                  <td class="td-rate">20%</td>
+                  <td>20%</td>
+                  <td>Высокая пошлина — рынок защищён</td>
+                </tr>
+                <tr>
+                  <td>Стальной прокат</td>
+                  <td class="td-code">7208 51 980 0</td>
+                  <td class="td-rate">5%</td>
+                  <td>20%</td>
+                  <td>Может быть антидемпинговая пошлина</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout article-callout--warning">
+            <p>Помимо базовой ставки, для ряда товаров из Китая действуют <strong>антидемпинговые и специальные защитные пошлины</strong> — они могут добавить ещё 10–50% сверху. Обязательно проверяйте наличие таких пошлин по своему коду на сайте ЕЭК.</p>
+          </div>
+
+          <h2 id="calc">Как посчитать таможенную стоимость: формула с примером</h2>
+
+          <p>Таможенная стоимость (ТС) — это база, от которой считаются все процентные платежи. Она не равна цене товара в инвойсе. Согласно методу 1 (метод по стоимости сделки, применяется в 85%+ случаев), ТС включает в себя все реальные расходы до пересечения таможенной границы ЕАЭС.</p>
+
+          <h3>Что включается в таможенную стоимость:</h3>
+          <ul>
+            <li>Цена товара по контракту (стоимость сделки)</li>
+            <li>Расходы на доставку до границы ЕАЭС (фрахт, транспортировка)</li>
+            <li>Страховка груза</li>
+            <li>Комиссии посредников, агентские вознаграждения</li>
+            <li>Стоимость упаковки и тары</li>
+            <li>Лицензионные платежи, если они являются условием продажи</li>
+          </ul>
+
+          <p><strong>Что НЕ включается:</strong> расходы на доставку внутри ЕАЭС после пересечения границы, таможенные пошлины и сборы, которые уплачиваются в России.</p>
+
+          <h3>Пошаговый расчёт на примере:</h3>
+          <p><em>Задача: импортируем партию USB-хабов из Шэньчжэня, 500 штук, код ТН ВЭД 8473 30 200 0, пошлина 10%, НДС 20%.</em></p>
+
+          <div class="step-block">
+            <div class="step-block__num">01</div>
+            <div>
+              <h3>Определяем таможенную стоимость</h3>
+              <p>Цена по инвойсу: $8 000 (FOB Шэньчжэнь). Фрахт морем до Владивостока: $600. Страховка: $40. Итого CIF-стоимость = $8 640. Курс ЦБ на дату принятия декларации: 92 ₽/$. ТС = 8 640 × 92 = <strong>795 088 ₽</strong>.</p>
+            </div>
+          </div>
+
+          <div class="step-block">
+            <div class="step-block__num">02</div>
+            <div>
+              <h3>Считаем ввозную пошлину</h3>
+              <p>Ставка пошлины 10% от ТС. Пошлина = 795 088 × 10% = <strong>79 509 ₽</strong>. Если бы ставка была комбинированной (например, 10%, мин. €0,5/шт.), нужно сравнить адвалорный и специфический расчёт и взять большее значение.</p>
+            </div>
+          </div>
+
+          <div class="step-block">
+            <div class="step-block__num">03</div>
+            <div>
+              <h3>Считаем НДС</h3>
+              <p>НДС начисляется на сумму ТС + пошлина (+ акциз, если есть). База для НДС = 795 088 + 79 509 = 874 597 ₽. НДС 20% = 874 597 × 20% = <strong>174 919 ₽</strong>. Важно: этот НДС можно принять к вычету, если вы на ОСН и используете товар в облагаемой НДС деятельности.</p>
+            </div>
+          </div>
+
+          <div class="step-block">
+            <div class="step-block__num">04</div>
+            <div>
+              <h3>Добавляем таможенный сбор</h3>
+              <p>При ТС от 600 000 до 1 200 000 ₽ сбор за оформление составляет <strong>3 375 ₽</strong> (ставка 2026 года). При большем объёме сбор растёт, но нелинейно — это фиксированная шкала.</p>
+            </div>
+          </div>
+
+          <div class="formula-block">
+            <div class="formula-line">
+              <span class="formula-label">Таможенная стоимость</span>
+              <span class="formula-val">795 088 ₽</span>
+            </div>
+            <div class="formula-line">
+              <span class="formula-label">+ Пошлина (10%)</span>
+              <span class="formula-val">79 509 ₽</span>
+            </div>
+            <div class="formula-line">
+              <span class="formula-label">+ НДС 20% от (ТС+П)</span>
+              <span class="formula-val">174 919 ₽</span>
+            </div>
+            <div class="formula-line">
+              <span class="formula-label">+ Таможенный сбор</span>
+              <span class="formula-val">3 375 ₽</span>
+            </div>
+            <div class="formula-line formula-result">
+              <span class="formula-label">ИТОГО к уплате на таможне</span>
+              <span>257 803 ₽</span>
+            </div>
+          </div>
+
+          <p>Итог: на партию USB-хабов за $8 000 мы заплатили на таможне около 258 000 ₽. Из них 175 000 ₽ НДС — подлежат вычету для плательщиков НДС на ОСН. Реальные невозвратные затраты — около 83 000 ₽ (пошлина + сбор), то есть около 11% от инвойсной стоимости товара.</p>
+
+          <h2 id="nds">НДС при импорте: 0%, 10%, 20% — кто платит что</h2>
+
+          <p>В отличие от «внутреннего» НДС, импортный НДС уплачивается непосредственно на таможне при подаче декларации — авансом, до выпуска товара. Это важно для планирования cash flow.</p>
+
+          <h3>Ставки НДС при импорте:</h3>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Ставка НДС</th>
+                  <th>Категории товаров</th>
+                  <th>Примеры из Китая</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-rate">0%</td>
+                  <td>Товары для дипломатических представительств, некоторые стратегические товары по спецрежимам</td>
+                  <td>Крайне редко применимо к стандартному коммерческому импорту</td>
+                </tr>
+                <tr>
+                  <td class="td-rate">10%</td>
+                  <td>Продовольствие (мясо, рыба, хлеб, сахар, овощи), детские товары, медицинские изделия, книги и периодика, лекарства</td>
+                  <td>Детская одежда и обувь, игрушки, пищевые продукты, витамины</td>
+                </tr>
+                <tr>
+                  <td class="td-rate">20%</td>
+                  <td>Все остальные товары</td>
+                  <td>Электроника, одежда для взрослых, мебель, строительные материалы, промышленное оборудование</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Кто может вернуть НДС:</h3>
+          <ul>
+            <li><strong>Организации и ИП на ОСН</strong> — могут принять импортный НДС к вычету в квартале, в котором товар принят к учёту. НДС, уплаченный на таможне, подтверждается таможенной декларацией и платёжными документами.</li>
+            <li><strong>УСН, ПСН, самозанятые</strong> — не являются плательщиками НДС, вычет невозможен. Таможенный НДС включается в стоимость товара и уменьшает налогооблагаемую прибыль.</li>
+          </ul>
+
+          <div class="article-callout article-callout--info">
+            <p>Для бизнеса на ОСН с регулярным импортом разница между ставками 10% и 20% НДС — это реальная отсрочка оборотных средств. При больших объёмах стоит заранее запланировать пополнение оборотки под уплату НДС на таможне.</p>
+          </div>
+
+          <h2 id="optimize">Легальная оптимизация: переклассификация, льготы, СТО</h2>
+
+          <p>«Оптимизировать» таможенные платежи — значит платить ровно столько, сколько положено по закону, не больше. Хорошие новости: законных инструментов снижения нагрузки достаточно.</p>
+
+          <h3>1. Правильная классификация по ТН ВЭД</h3>
+          <p>Это первое, что нужно проверить. Один и тот же товар может подходить под несколько кодов — выбор должен быть обоснованным и документально подтверждённым. Например, многофункциональное устройство (МФУ) будет классифицироваться иначе, чем просто принтер, и это легально меняет ставку.</p>
+
+          <h3>2. Предварительное классификационное решение (ПКР)</h3>
+          <p>Можно обратиться в ФТС с запросом на предварительное классификационное решение — это официальный документ, который фиксирует, какой код применяется к вашему товару. Защищает от споров с таможней при последующих поставках. Срок получения — до 90 дней.</p>
+
+          <h3>3. Льготы для технологического оборудования</h3>
+          <p>Постановление Правительства РФ № 372 устанавливает перечень технологического оборудования, аналоги которого не производятся в России, — при ввозе таких товаров НДС составляет 0%. Перечень периодически обновляется. Если вы ввозите производственное оборудование, этот инструмент стоит проверить.</p>
+
+          <h3>4. Режим переработки на таможенной территории</h3>
+          <p>Если вы ввозите компоненты или сырьё для производства готовой продукции внутри ЕАЭС, можно оформить режим переработки на таможенной территории — пошлины и НДС уплачиваются только с добавленной стоимости, а не со всей ввозимой партии.</p>
+
+          <h3>5. Страна происхождения и преференции</h3>
+          <p>Для ряда товаров из стран, с которыми у ЕАЭС подписаны торговые соглашения, действуют преференциальные ставки. С Китаем у ЕАЭС нет полноформатного ФТА, однако для отдельных товарных позиций существуют режимы ГСП (Generalized System of Preferences). Актуальный перечень — на сайте ЕЭК.</p>
+
+          <h3>6. Специальные таможенные операции (СТО) и таможенный склад</h3>
+          <p>Если вам не нужно выпускать весь товар сразу, размещение на таможенном складе позволяет отсрочить уплату платежей до момента фактического изъятия партий из склада. Удобно при закупке больших объёмов с постепенной реализацией.</p>
+
+          <div class="article-callout">
+            <p>Все перечисленные инструменты — легальные и широко применяемые. Главное требование — документальное обоснование. «Просто поставить другой код» без подтверждения характеристик товара — это уже нарушение.</p>
+          </div>
+
+          <h2 id="mistakes">Ошибки, которые приводят к штрафам и задержкам на таможне</h2>
+
+          <p>За 10 лет практики я насчитала десятки типичных ошибок. Вот самые дорогостоящие:</p>
+
+          <div class="step-block">
+            <div class="step-block__num">01</div>
+            <div>
+              <h3>Занижение таможенной стоимости</h3>
+              <p>«Попросить поставщика написать в инвойсе меньшую сумму» — классическая схема, которую таможня отрабатывает в первую очередь. Сравниваются с ценами в базах ТБАСТО, GTR, аналогичными декларациями. Доначисление + штраф 50–200% от суммы недоимки + уголовная статья при крупном размере (ст. 194 УК РФ).</p>
+            </div>
+          </div>
+
+          <div class="step-block">
+            <div class="step-block__num">02</div>
+            <div>
+              <h3>Неверная классификация без обоснования</h3>
+              <p>Самостоятельно поставить «выгодный» код без технической документации, подтверждающей характеристики товара. Таможня запросит экспертизу — и если код не совпадёт с реальными характеристиками, декларация будет скорректирована + штраф по ст. 16.2 КоАП РФ от 50 до 200% суммы неуплаченных платежей.</p>
+            </div>
+          </div>
+
+          <div class="step-block">
+            <div class="step-block__num">03</div>
+            <div>
+              <h3>Несоответствие документов друг другу</h3>
+              <p>Инвойс, упаковочный лист и коносамент содержат разные сведения о количестве, весе или описании товара. Это флаг для досмотра. Досмотр — потеря времени (1–7 дней) и расходы на хранение.</p>
+            </div>
+          </div>
+
+          <div class="step-block">
+            <div class="step-block__num">04</div>
+            <div>
+              <h3>Отсутствие обязательных разрешительных документов</h3>
+              <p>Электроника, детские товары, средства защиты, медицинские изделия, продукты питания требуют сертификатов, деклараций о соответствии, свидетельств о государственной регистрации. Без них — запрет на выпуск. Документы нужно получать заранее, ещё до отгрузки товара.</p>
+            </div>
+          </div>
+
+          <div class="step-block">
+            <div class="step-block__num">05</div>
+            <div>
+              <h3>Неправильное определение страны происхождения</h3>
+              <p>Если товар произведён в Китае, а страна происхождения в документах указана иначе (например, Гонконг или третья страна) без достаточных оснований — это квалифицируется как недостоверное декларирование. С последствиями от возврата товара до уголовного преследования.</p>
+            </div>
+          </div>
+
+          <div class="article-callout">
+            <p>Занижение таможенной стоимости на сумму свыше 2 млн рублей квалифицируется как уклонение от уплаты таможенных платежей (ст. 194 УК РФ) — лишение свободы до 2 лет. При особо крупном размере (свыше 9 млн) — до 5 лет. Это не административная ответственность, это уголовная.</p>
+          </div>
+
+          <h2 id="example">Разбор реального кейса: электроника, пошлина 15% → 5%</h2>
+
+          <p>Один из наших клиентов — оптовый продавец промышленных светодиодных светильников — обратился с проблемой: таможенный брокер декларировал товар под кодом <strong>9405 40 390 0</strong> (прочие светильники и осветительная арматура), ставка пошлины — <strong>15%</strong>. На годовом обороте около $500 000 это давало пошлину около $75 000.</p>
+
+          <h3>Что мы сделали:</h3>
+
+          <ol>
+            <li><strong>Изучили технические характеристики товара.</strong> Светильники предназначены для промышленного применения — монтируются на производственных объектах, рассчитаны на взрывозащищённую среду (IP65), имеют сертификаты ATEX.</li>
+            <li><strong>Проанализировали альтернативные коды.</strong> Светильники со встроенными LED-источниками специального промышленного исполнения попадают под код <strong>9405 42 110 0</strong> (светильники прочие для помещений, с источниками излучения на основе светодиодов). Ставка — <strong>5%</strong>.</li>
+            <li><strong>Подготовили техническое обоснование.</strong> Запросили у китайского завода подробные технические паспорта, фотографии конструкции, материалы корпуса, параметры защиты. На основании этих документов подготовили заключение о классификации.</li>
+            <li><strong>Получили предварительное классификационное решение в ФТС.</strong> Это заняло 60 дней, но зафиксировало код официально — спорить с таможенным инспектором больше не нужно.</li>
+            <li><strong>Пересчитали ретроспективно.</strong> Подали корректировки по последним 3 поставкам — вернули переплату около 280 000 ₽.</li>
+          </ol>
+
+          <h3>Экономический результат:</h3>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Показатель</th>
+                  <th>До оптимизации</th>
+                  <th>После оптимизации</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Код ТН ВЭД</td>
+                  <td class="td-code">9405 40 390 0</td>
+                  <td class="td-code">9405 42 110 0</td>
+                </tr>
+                <tr>
+                  <td>Ставка пошлины</td>
+                  <td class="td-rate">15%</td>
+                  <td class="td-rate">5%</td>
+                </tr>
+                <tr>
+                  <td>Пошлина в год (при $500К обороте)</td>
+                  <td>~$75 000 / ~6 900 000 ₽</td>
+                  <td>~$25 000 / ~2 300 000 ₽</td>
+                </tr>
+                <tr>
+                  <td>Ежегодная экономия</td>
+                  <td colspan="2"><strong>~4 600 000 ₽ в год</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Весь процесс занял около 3 месяцев. Стоимость работы по оптимизации — около 120 000 ₽. Окупаемость — меньше двух недель экономии. Это реальный кейс, не гипотетический расчёт.</p>
+
+          <div class="article-callout article-callout--info">
+            <p>Переклассификация работает именно потому, что товар реально соответствовал новому коду по своим характеристикам. Мы не «придумали» новый код — мы нашли тот, который правильно описывает товар. В этом ключевое отличие легальной оптимизации от налогового мошенничества.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Хотите проверить, не переплачиваете ли вы на таможне?</h3>
+            <p>Пришлите код ТН ВЭД и описание вашего товара — проведём бесплатный экспресс-анализ и оценим потенциал оптимизации.</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary btn--large">gorn.import@mail.ru →</a>
+          </div>
+
+        </article>
+
+        <!-- TOC sidebar -->
+        <aside class="article-toc reveal-up" style="--delay:.2s">
+          <h4>Содержание</h4>
+          <ol>
+            <li><a href="#basics">Что входит в таможенные платежи</a></li>
+            <li><a href="#tnved">ТН ВЭД: классификация товаров</a></li>
+            <li><a href="#rates">Ставки пошлин: где смотреть</a></li>
+            <li><a href="#calc">Расчёт таможенной стоимости</a></li>
+            <li><a href="#nds">НДС при импорте: 0%, 10%, 20%</a></li>
+            <li><a href="#optimize">Легальная оптимизация</a></li>
+            <li><a href="#mistakes">Ошибки и штрафы</a></li>
+            <li><a href="#example">Кейс: с 15% до 5%</a></li>
+          </ol>
+          <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Нужен аудит ваших таможенных платежей?</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary" style="width:100%;justify-content:center;font-size:13px">Написать нам</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>Другие статьи</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Читайте также</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <a href="blog-china-import-guide.html" class="service-item reveal-up">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Импорт из Китая: полный гайд</h3>
+            <p>От выбора товара до получения груза на склад</p>
+          </div>
+        </a>
+        <a href="blog-supplier-check.html" class="service-item reveal-up" style="--delay:.08s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Как проверить китайского поставщика</h3>
+            <p>7 методов, которые реально работают</p>
+          </div>
+        </a>
+        <a href="blog-logistics-routes.html" class="service-item reveal-up" style="--delay:.16s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Маршруты доставки из Китая 2026</h3>
+            <p>Море, авто, ж/д, авиа — сравнение сроков и цен</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Статьи</h5>
+          <a href="blog-china-import-guide.html">Импорт из Китая: гайд</a>
+          <a href="blog-supplier-check.html">Проверка поставщика</a>
+          <a href="blog-logistics-routes.html">Маршруты доставки</a>
+          <a href="blog-customs-duty.html">Таможенные пошлины</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

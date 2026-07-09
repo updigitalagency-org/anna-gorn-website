@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги — Gorn Import</title>
+  <meta name="description" content="ВЭД-консалтинг, организация импорта, логистика, переговоры с поставщиками, аудит закупок. Комплексные решения для вашего бизнеса.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero__pattern"></div>
+    <div class="page-hero__red-bar"></div>
+    <div class="container">
+      <div class="page-hero__eyebrow reveal-up">
+        <span class="page-hero__eyebrow-line"></span>
+        Что мы делаем
+      </div>
+      <h1 class="page-hero__title">
+        <div class="line"><span class="reveal-word">Услуги, которые</span></div>
+        <div class="line"><span class="reveal-word" style="transition-delay:.15s">влияют на <span>прибыль</span></span></div>
+      </h1>
+      <p class="page-hero__sub reveal-up" style="--delay:.25s">
+        Каждая услуга — инструмент для роста вашего бизнеса. Мы не продаём сервис. Мы создаём финансовый результат.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+
+        <!-- 01 -->
+        <div class="service-card service-card--expandable reveal-up">
+          <div class="service-card__header">
+            <span class="service-card__num">01</span>
+            <div class="service-card__body">
+              <h3>ВЭД-консалтинг</h3>
+              <p>Полное стратегическое сопровождение внешнеэкономической деятельности. Анализируем текущую ситуацию, выстраиваем эффективную систему, сопровождаем на каждом шагу. Вы получаете партнёра, который лично отвечает за результат.</p>
+              <div class="service-card__features">
+                <span class="service-card__feature">Аудит текущих закупок и выявление потерь</span>
+                <span class="service-card__feature">Разработка стратегии международных закупок</span>
+                <span class="service-card__feature">Постоянное сопровождение и оптимизация</span>
+                <span class="service-card__feature">Прозрачная отчётность по каждой сделке</span>
+              </div>
+            </div>
+            <div class="service-card__price">
+              <span class="service-card__price-label">Формат</span>
+              <span class="service-card__price-val">Индивидуально</span>
+            </div>
+            <button class="service-card__toggle" aria-label="Подробнее">
+              <span class="service-card__toggle-text">Подробнее</span>
+              <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="toggle-v"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="service-card__expand">
+            <div class="service-card__expand-inner">
+              <div class="svc-detail-grid">
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Как это работает</h4>
+                  <ol class="svc-detail-steps">
+                    <li><strong>Бесплатная консультация</strong> — разбираем вашу текущую ситуацию и цели. Даём первичную оценку потенциала экономии.</li>
+                    <li><strong>ВЭД-аудит</strong> — анализируем все текущие поставки, поставщиков, маршруты. Находим, где вы теряете деньги прямо сейчас.</li>
+                    <li><strong>Стратегия закупок</strong> — разрабатываем план оптимизации с конкретными цифрами: кто, откуда, по какой цене.</li>
+                    <li><strong>Внедрение и сопровождение</strong> — ведём переговоры, выстраиваем процессы, контролируем каждую поставку. Вы занимаетесь бизнесом.</li>
+                  </ol>
+                </div>
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Что вы получаете</h4>
+                  <ul class="svc-detail-list">
+                    <li>Снижение себестоимости закупок на <strong>до 25–30%</strong></li>
+                    <li>Прозрачная структура расходов по каждой поставке</li>
+                    <li>Готовая база проверенных поставщиков в 15+ странах</li>
+                    <li>Отчёт с цифрами после каждой сделки</li>
+                    <li>Личный контроль Анны Горн на всех этапах</li>
+                  </ul>
+                  <div class="svc-detail-case">
+                    <div class="svc-detail-case__label">Пример результата</div>
+                    <div class="svc-detail-case__metric">−28%</div>
+                    <div class="svc-detail-case__text">к себестоимости у производителя мебели в Москве за 4 месяца сопровождения</div>
+                  </div>
+                </div>
+              </div>
+              <div class="svc-detail-cta">
+                <a href="contact.html" class="btn btn--primary">Обсудить задачу →</a>
+                <span class="svc-detail-cta__note">Первая консультация — бесплатно · Ответим за 2–4 часа</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="service-card service-card--expandable reveal-up">
+          <div class="service-card__header">
+            <span class="service-card__num">02</span>
+            <div class="service-card__body">
+              <h3>Организация импорта</h3>
+              <p>Находим лучших производителей в Китае, Турции, Индии, Вьетнаме и других странах. Проверяем каждого поставщика, проводим переговоры, контролируем производство и качество. Вы получаете товар по лучшей цене от надёжного партнёра.</p>
+              <div class="service-card__features">
+                <span class="service-card__feature">Поиск и верификация производителей</span>
+                <span class="service-card__feature">Сравнительный анализ коммерческих предложений</span>
+                <span class="service-card__feature">Переговоры об условиях и ценах</span>
+                <span class="service-card__feature">Контроль производства и качества товара</span>
+              </div>
+            </div>
+            <div class="service-card__price">
+              <span class="service-card__price-label">Страны</span>
+              <span class="service-card__price-val">15+ стран</span>
+            </div>
+            <button class="service-card__toggle" aria-label="Подробнее">
+              <span class="service-card__toggle-text">Подробнее</span>
+              <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="toggle-v"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="service-card__expand">
+            <div class="service-card__expand-inner">
+              <div class="svc-detail-grid">
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Страны и рынки</h4>
+                  <ul class="svc-detail-list">
+                    <li><strong>Китай</strong> — широчайший ассортимент, лучшие цены на большинство категорий</li>
+                    <li><strong>Турция</strong> — текстиль, строительство, металлопрокат, мебель</li>
+                    <li><strong>Индия</strong> — фармацевтика, химия, текстиль, ремесленные товары</li>
+                    <li><strong>Вьетнам, Корея</strong> — электроника, одежда, обувь</li>
+                    <li><strong>Германия, Италия</strong> — оборудование, промышленные комплектующие</li>
+                    <li><strong>ОАЭ</strong> — реэкспорт, параллельный импорт</li>
+                  </ul>
+                </div>
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Почему безопасно</h4>
+                  <ul class="svc-detail-list">
+                    <li>Проверяем каждого поставщика через государственные реестры КНР (SAIC)</li>
+                    <li>Заказываем образцы перед основной партией</li>
+                    <li>Инспекция качества перед отгрузкой (pre-shipment)</li>
+                    <li>Все условия и гарантии фиксируются в контракте</li>
+                    <li>Личная ответственность за результат каждой поставки</li>
+                  </ul>
+                  <div class="svc-detail-case">
+                    <div class="svc-detail-case__label">Пример результата</div>
+                    <div class="svc-detail-case__metric">×2.3</div>
+                    <div class="svc-detail-case__text">увеличение объёма закупок строительной компании из Краснодара при той же марже — за счёт прямого выхода на турецкий завод</div>
+                  </div>
+                </div>
+              </div>
+              <div class="svc-detail-cta">
+                <a href="contact.html" class="btn btn--primary">Найти поставщика →</a>
+                <span class="svc-detail-cta__note">Расскажите, что нужно найти — ответим в течение нескольких часов</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="service-card service-card--expandable reveal-up">
+          <div class="service-card__header">
+            <span class="service-card__num">03</span>
+            <div class="service-card__body">
+              <h3>Логистика и таможенное оформление</h3>
+              <p>Доставка «под ключ» — от склада производителя до вашего склада. Выбираем оптимальный маршрут и вид транспорта. Берём на себя всё таможенное оформление, документацию и расчёт полной себестоимости импорта.</p>
+              <div class="service-card__features">
+                <span class="service-card__feature">Мультимодальная доставка (море, авиа, авто, ж/д)</span>
+                <span class="service-card__feature">Таможенное оформление и декларирование</span>
+                <span class="service-card__feature">Расчёт себестоимости с учётом всех расходов</span>
+                <span class="service-card__feature">Отслеживание груза на каждом этапе</span>
+              </div>
+            </div>
+            <div class="service-card__price">
+              <span class="service-card__price-label">Доставка</span>
+              <span class="service-card__price-val">Под ключ</span>
+            </div>
+            <button class="service-card__toggle" aria-label="Подробнее">
+              <span class="service-card__toggle-text">Подробнее</span>
+              <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="toggle-v"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="service-card__expand">
+            <div class="service-card__expand-inner">
+              <div class="svc-detail-grid">
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Маршруты доставки из Китая</h4>
+                  <ul class="svc-detail-list">
+                    <li><strong>Море → Владивосток</strong> — 25–35 дней, самый дешёвый для крупных партий</li>
+                    <li><strong>Ж/д (КЧЖТ)</strong> — 18–25 дней, оптимально для средних объёмов</li>
+                    <li><strong>Авто через Казахстан</strong> — 12–18 дней, гибкий маршрут</li>
+                    <li><strong>Авиа</strong> — 3–7 дней, для срочных и дорогих грузов</li>
+                  </ul>
+                  <h4 class="svc-detail-h" style="margin-top:20px">Что входит в таможенное оформление</h4>
+                  <ul class="svc-detail-list">
+                    <li>Классификация товара по ТН ВЭД</li>
+                    <li>Подготовка всех таможенных документов</li>
+                    <li>Подача декларации и взаимодействие с ФТС</li>
+                    <li>Уплата пошлин и НДС</li>
+                    <li>Получение разрешительных документов</li>
+                  </ul>
+                </div>
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Полная себестоимость = никаких сюрпризов</h4>
+                  <p style="font-size:14px;color:var(--muted);line-height:1.7">Большинство поставщиков называют FOB-цену. Реальная стоимость на вашем складе — в 1.4–1.6 раза выше. Мы считаем всё заранее: фрахт, страховку, таможню, НДС, брокера, последнюю милю.</p>
+                  <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-top:12px">Вы получаете точную цифру <strong>до</strong> принятия решения о закупке — не после.</p>
+                  <div class="svc-detail-case">
+                    <div class="svc-detail-case__label">Наш результат</div>
+                    <div class="svc-detail-case__metric">0</div>
+                    <div class="svc-detail-case__text">задержанных или потерянных грузов за 10 лет работы — благодаря инспекции и выбору проверенных логистических партнёров</div>
+                  </div>
+                </div>
+              </div>
+              <div class="svc-detail-cta">
+                <a href="contact.html" class="btn btn--primary">Рассчитать доставку →</a>
+                <span class="svc-detail-cta__note">Скажите откуда, куда и что — посчитаем полную себестоимость</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="service-card service-card--expandable reveal-up">
+          <div class="service-card__header">
+            <span class="service-card__num">04</span>
+            <div class="service-card__body">
+              <h3>Переговоры с поставщиками</h3>
+              <p>Знаем, как разговаривать с зарубежными производителями — на их языке, с пониманием их культуры бизнеса. Получаем условия, которые самостоятельно вы бы не смогли: скидки за объём, отсрочки, гарантии замены брака.</p>
+              <div class="service-card__features">
+                <span class="service-card__feature">Снижение закупочной цены на 10–30%</span>
+                <span class="service-card__feature">Согласование условий оплаты и отсрочек</span>
+                <span class="service-card__feature">Гарантии качества и замены бракованного товара</span>
+                <span class="service-card__feature">Долгосрочные контракты с зафиксированными ценами</span>
+              </div>
+            </div>
+            <div class="service-card__price">
+              <span class="service-card__price-label">Экономия</span>
+              <span class="service-card__price-val">10–30%</span>
+            </div>
+            <button class="service-card__toggle" aria-label="Подробнее">
+              <span class="service-card__toggle-text">Подробнее</span>
+              <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="toggle-v"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="service-card__expand">
+            <div class="service-card__expand-inner">
+              <div class="svc-detail-grid">
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Почему мы переговариваемся лучше</h4>
+                  <ul class="svc-detail-list">
+                    <li>10 лет работы с китайскими, турецкими и индийскими заводами — знаем их логику и красные линии</li>
+                    <li>Понимание культуры бизнеса: как торговаться в Китае и как — в Турции, это разные подходы</li>
+                    <li>Личные связи с производителями в 15 странах — нас знают и уважают</li>
+                    <li>Объём портфеля клиентов = рычаг давления на поставщика</li>
+                  </ul>
+                </div>
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Что реально можно получить</h4>
+                  <ul class="svc-detail-list">
+                    <li>Снижение закупочной цены на <strong>10–30%</strong> от первоначального предложения</li>
+                    <li>Отсрочка платежа <strong>30–90 дней</strong> (вместо 100% предоплаты)</li>
+                    <li>Бесплатная замена брака или денежная компенсация</li>
+                    <li>Фиксированная цена на 6–12 месяцев при росте рынка</li>
+                    <li>Приоритет в производственном графике в горячий сезон</li>
+                  </ul>
+                  <div class="svc-detail-case">
+                    <div class="svc-detail-case__label">Реальный пример</div>
+                    <div class="svc-detail-case__metric">+35%</div>
+                    <div class="svc-detail-case__text">рост маржинальности интернет-магазина электроники после переговоров и выхода на прямых поставщиков в Корее и Вьетнаме</div>
+                  </div>
+                </div>
+              </div>
+              <div class="svc-detail-cta">
+                <a href="contact.html" class="btn btn--primary">Получить лучшие условия →</a>
+                <span class="svc-detail-cta__note">Расскажите о ваших текущих условиях — покажем, где можно улучшить</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="service-card service-card--expandable reveal-up">
+          <div class="service-card__header">
+            <span class="service-card__num">05</span>
+            <div class="service-card__body">
+              <h3>Аудит текущих закупок</h3>
+              <p>Смотрим на ваши существующие закупки свежим взглядом и находим, где вы переплачиваете прямо сейчас. В 9 из 10 случаев находим резервы для экономии. Аудит окупается уже на первой оптимизированной поставке.</p>
+              <div class="service-card__features">
+                <span class="service-card__feature">Анализ текущих поставщиков и рыночных цен</span>
+                <span class="service-card__feature">Выявление переплат и скрытых расходов</span>
+                <span class="service-card__feature">Альтернативные предложения от рынка</span>
+                <span class="service-card__feature">Конкретный план оптимизации с цифрами</span>
+              </div>
+            </div>
+            <div class="service-card__price">
+              <span class="service-card__price-label">Срок</span>
+              <span class="service-card__price-val">2 недели</span>
+            </div>
+            <button class="service-card__toggle" aria-label="Подробнее">
+              <span class="service-card__toggle-text">Подробнее</span>
+              <svg viewBox="0 0 20 20" fill="none" width="18" height="18"><line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="toggle-v"/><line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="service-card__expand">
+            <div class="service-card__expand-inner">
+              <div class="svc-detail-grid">
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Как проходит аудит</h4>
+                  <ol class="svc-detail-steps">
+                    <li><strong>Вы передаёте данные</strong> — список поставщиков, цены, объёмы, маршруты доставки. Всё конфиденциально.</li>
+                    <li><strong>Мы анализируем</strong> — сравниваем с актуальными рыночными ценами в 15 странах. Выявляем переплаты.</li>
+                    <li><strong>Находим альтернативы</strong> — конкретные поставщики с лучшими условиями под ваш товар.</li>
+                    <li><strong>Выдаём отчёт</strong> — где теряете деньги, сколько, как исправить. Конкретные цифры, не общие слова.</li>
+                  </ol>
+                </div>
+                <div class="svc-detail-col">
+                  <h4 class="svc-detail-h">Что находим в 9 из 10 случаев</h4>
+                  <ul class="svc-detail-list">
+                    <li>Переплата посредникам: вы думаете, что работаете с заводом — на самом деле нет</li>
+                    <li>Устаревшая цена: рынок изменился, а вы всё ещё платите по старым договорам</li>
+                    <li>Неоптимальный маршрут: тот же товар, но доставка дешевле другим путём</li>
+                    <li>Скрытые расходы: таможенная классификация, неверные ставки пошлин</li>
+                    <li>Ошибки в условиях контракта, которые стоят денег при браке</li>
+                  </ul>
+                  <div class="svc-detail-case">
+                    <div class="svc-detail-case__label">Средний результат</div>
+                    <div class="svc-detail-case__metric">30%</div>
+                    <div class="svc-detail-case__text">потенциальной экономии находим в среднем по каждому аудиту. Аудит окупается уже на первой оптимизированной поставке.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="svc-detail-cta">
+                <a href="contact.html" class="btn btn--primary">Заказать аудит →</a>
+                <span class="svc-detail-cta__note">Срок — 2 недели · Первая консультация по аудиту бесплатна</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <div class="section-eyebrow reveal-up" style="justify-content:center">
+          <span class="section-eyebrow-line"></span>Как мы работаем<span class="section-eyebrow-line"></span>
+        </div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">От первого звонка<br>до выгодной поставки</h2>
+      </div>
+      <div class="process__steps">
+        <div class="process__step reveal-up">
+          <div class="process__step-icon">01</div>
+          <h4>Консультация</h4>
+          <p>Бесплатный созвон 30–60 минут. Разбираем вашу задачу, оцениваем потенциал экономии. Никаких обязательств.</p>
+        </div>
+        <div class="process__step reveal-up" style="--delay:.1s">
+          <div class="process__step-icon">02</div>
+          <h4>Анализ и стратегия</h4>
+          <p>Изучаем рынок, анализируем поставщиков, просчитываем логистику. Готовим конкретную стратегию с прогнозируемым результатом.</p>
+        </div>
+        <div class="process__step reveal-up" style="--delay:.2s">
+          <div class="process__step-icon">03</div>
+          <h4>Переговоры и закупка</h4>
+          <p>Ведём переговоры, оформляем документы, контролируем производство и качество. Вы в курсе каждого шага — без лишних деталей.</p>
+        </div>
+        <div class="process__step reveal-up" style="--delay:.3s">
+          <div class="process__step-icon">04</div>
+          <h4>Доставка и отчёт</h4>
+          <p>Товар приходит в срок. Полный отчёт с цифрами: сколько стоило, сколько сэкономили, что улучшить в следующий раз.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>FAQ</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Частые вопросы</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>С каким объёмом закупок вы работаете?</h4>
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Работаем с бизнесом от малого до среднего. Минимальный порог — закупки от 500 000 ₽ в год. При таком объёме оптимизация даёт ощутимый финансовый результат. Если объём меньше — посоветуем, что сделать самостоятельно.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Как быстро я увижу результат?</h4>
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Первый результат — уже после аудита (1–2 недели): вы увидите конкретные цифры потенциальной экономии. По первой оптимизированной поставке — обычно 4–8 недель в зависимости от товара и страны.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Вы работаете только с Китаем?</h4>
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Нет. Есть проверенные партнёры в 15+ странах: Китай, Турция, Индия, Япония, Германия, Италия, Польша, ОАЭ и другие. Выбираем страну исходя из вашего товара, требований к качеству и бюджета.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Что если поставщик нарушит условия или привезут брак?</h4>
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Прописываем гарантии в контракте и контролируем качество ещё на производстве. Если брак попал в партию — добиваемся компенсации или замены. Это наша ответственность, не ваша.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Сколько стоят ваши услуги?</h4>
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Стоимость зависит от объёма и сложности задачи. Работаем по двум моделям: фиксированная комиссия от суммы закупки или пакет «под ключ». В большинстве случаев вознаграждение перекрывается экономией уже на первой поставке.</div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question">
+            <h4>Можно ли работать разово, без долгосрочных обязательств?</h4>
+            <span class="faq__icon">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">Да. Работаем как под разовые задачи (аудит или одна поставка), так и на постоянной основе. Большинство клиентов, начинавших с разовой задачи, переходят на постоянное сотрудничество — потому что видят результат.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2 class="cta-banner__title reveal-up">Начнём с консультации</h2>
+        <p class="cta-banner__sub reveal-up" style="--delay:.1s">Бесплатно. 30 минут. Конкретные выводы для вашего бизнеса.</p>
+        <a href="contact.html" class="btn btn--navy btn--large reveal-up" style="--delay:.2s">Записаться →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Услуги</h5>
+          <a href="services.html">ВЭД-консалтинг</a>
+          <a href="services.html">Организация импорта</a>
+          <a href="services.html">Логистика и таможня</a>
+          <a href="services.html">Аудит закупок</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

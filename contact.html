@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Gorn Import</title>
+  <meta name="description" content="Свяжитесь с нами для бесплатной консультации по ВЭД. gorn.import@mail.ru">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="mailto:gorn.import@mail.ru" class="btn btn--outline-white">gorn.import@mail.ru</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero__pattern"></div>
+    <div class="page-hero__red-bar"></div>
+    <div class="container">
+      <div class="page-hero__eyebrow reveal-up">
+        <span class="page-hero__eyebrow-line"></span>
+        Связаться с нами
+      </div>
+      <h1 class="page-hero__title">
+        <div class="line"><span class="reveal-word">Давайте обсудим</span></div>
+        <div class="line"><span class="reveal-word" style="transition-delay:.15s">вашу <span>задачу</span></span></div>
+      </h1>
+      <p class="page-hero__sub reveal-up" style="--delay:.25s">
+        Первая консультация — бесплатно. Расскажите о вашем бизнесе. Мы ответим в течение нескольких часов с конкретными предложениями.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact__grid">
+
+        <!-- Info -->
+        <div class="contact__info reveal-up">
+          <div class="contact__info-item">
+            <h4>Email для всех запросов</h4>
+            <a href="mailto:gorn.import@mail.ru">gorn.import@mail.ru</a>
+            <p>Пишите по любому вопросу. Отвечаем в рабочие часы в течение 2–4 часов.</p>
+          </div>
+
+          <div class="contact__info-item">
+            <h4>Режим работы</h4>
+            <span style="font-family:var(--font-h);font-size:20px;font-weight:800;color:var(--text)">Пн–Пт, 9:00–19:00</span>
+            <p>МСК. В выходные отвечаем на срочные вопросы.</p>
+          </div>
+
+          <div class="contact__info-item">
+            <h4>Первый шаг</h4>
+            <span style="font-family:var(--font-h);font-size:20px;font-weight:800;color:var(--text)">Бесплатная консультация</span>
+            <p>30–60 минут. Без обязательств. Конкретные выводы и цифры.</p>
+          </div>
+
+          <div class="contact__promise">
+            <span class="contact__promise-icon">◈</span>
+            <div class="contact__promise-text">
+              <h4>Наше обещание</h4>
+              <p>Не будем давить на продажу. Если после консультации вы решите не работать с нами — уйдёте с полезными знаниями о своих закупках. Это честно.</p>
+            </div>
+          </div>
+
+          <!-- Why cards -->
+          <div style="display:flex;flex-direction:column;gap:12px;padding-top:8px">
+            <div class="why-card" style="padding:20px 24px;display:flex;gap:14px;align-items:flex-start">
+              <span style="color:var(--red);flex-shrink:0;margin-top:2px">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div><h4 style="font-size:14px;margin-bottom:4px">Ответим быстро</h4>
+              <p style="font-size:13px">В рабочие часы — в течение 2–4 часов. Без конца дня.</p></div>
+            </div>
+            <div class="why-card" style="padding:20px 24px;display:flex;gap:14px;align-items:flex-start">
+              <span style="color:var(--red);flex-shrink:0;margin-top:2px">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+              </span>
+              <div><h4 style="font-size:14px;margin-bottom:4px">Без воды</h4>
+              <p style="font-size:13px">Разберём вашу конкретную ситуацию и дадим ответ с цифрами.</p></div>
+            </div>
+            <div class="why-card" style="padding:20px 24px;display:flex;gap:14px;align-items:flex-start">
+              <span style="color:var(--red);flex-shrink:0;margin-top:2px">
+                <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="3" y="12" width="4" height="9" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="10" y="7" width="4" height="14" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="17" y="3" width="4" height="18" rx="1" stroke="currentColor" stroke-width="1.8"/></svg>
+              </span>
+              <div><h4 style="font-size:14px;margin-bottom:4px">Первый результат — сразу</h4>
+              <p style="font-size:13px">Уже на консультации узнаете, где теряете деньги и сколько можно сэкономить.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact__form-wrap reveal-up" style="--delay:.15s">
+          <h2 class="contact__form-title">Оставить заявку</h2>
+          <p class="contact__form-sub">Заполните форму — свяжемся в течение нескольких часов и назначим удобное время для разговора.</p>
+
+          <form id="contactForm" action="mailto:gorn.import@mail.ru" method="post" enctype="text/plain">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Ваше имя *</label>
+                <input type="text" id="name" name="name" placeholder="Александр" required>
+              </div>
+              <div class="form-group">
+                <label for="company">Компания</label>
+                <input type="text" id="company" name="company" placeholder="ООО Ромашка">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.ru" required>
+            </div>
+            <div class="form-group">
+              <label for="service">Что вас интересует</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Выберите направление</option>
+                <option value="audit">Аудит текущих закупок</option>
+                <option value="import">Организация импорта</option>
+                <option value="consulting">ВЭД-консалтинг</option>
+                <option value="logistics">Логистика и таможня</option>
+                <option value="negotiations">Переговоры с поставщиками</option>
+                <option value="other">Другое / не знаю с чего начать</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Расскажите о задаче *</label>
+              <textarea id="message" name="message" placeholder="Что закупаете, откуда, какой объём, с какой проблемой столкнулись..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--large" style="width:100%;justify-content:center;margin-top:8px">
+              Отправить заявку →
+            </button>
+            <p style="font-size:11px;color:var(--muted2);margin-top:14px;text-align:center;line-height:1.6">
+              Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <h2 class="cta-banner__title reveal-up">Один email — и мы начнём</h2>
+        <p class="cta-banner__sub reveal-up" style="--delay:.1s">
+          <a href="mailto:gorn.import@mail.ru" style="color:#fff;font-weight:700;font-size:1.2em;text-decoration:underline;text-underline-offset:4px">gorn.import@mail.ru</a>
+        </p>
+        <a href="mailto:gorn.import@mail.ru" class="btn btn--navy btn--large reveal-up" style="--delay:.2s">Написать сейчас →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Услуги</h5>
+          <a href="services.html">ВЭД-консалтинг</a>
+          <a href="services.html">Организация импорта</a>
+          <a href="services.html">Логистика и таможня</a>
+          <a href="services.html">Аудит закупок</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Gorn Import. Все права защищены.</span>
+        <a href="privacy.html" style="color:var(--muted2);font-size:inherit">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

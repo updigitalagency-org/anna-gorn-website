@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как платить китайским поставщикам в 2026 году: Swift, юань, криптовалюта — Gorn Import</title>
+  <meta name="description" content="Разбираем все актуальные способы оплаты китайских поставщиков из России в 2026 году: SWIFT через третьи страны, юань, платёжные агенты, USDT, аккредитив. Практические схемы от ВЭД-эксперта Анны Горн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-hero { background: var(--navy); padding: 160px 0 80px; position: relative; overflow: hidden; }
+    .article-hero__pattern { position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 60px);pointer-events:none; }
+    .article-hero__red-bar { position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red); }
+    .article-hero__tag { display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:24px; }
+    .article-hero__title { font-family:var(--font-h);font-size:clamp(28px,4vw,52px);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px;max-width:800px; }
+    .article-hero__meta { display:flex;gap:24px;font-size:13px;color:rgba(255,255,255,.4);padding-top:32px;border-top:1px solid rgba(255,255,255,.1); }
+    .article-hero__meta strong { color:rgba(255,255,255,.7); }
+
+    .article-layout { display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start; }
+    .article-toc { position:sticky;top:100px;background:var(--surface);border-radius:8px;padding:28px;border:1px solid var(--border); }
+    .article-toc h4 { font-family:var(--font-h);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px; }
+    .article-toc ol { padding-left:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-toc ol li a { font-size:13px;color:var(--muted);transition:color .2s; }
+    .article-toc ol li a:hover { color:var(--red); }
+
+    .article-body { min-width:0; }
+    .article-body h2 { font-family:var(--font-h);font-size:26px;font-weight:800;color:var(--text);margin:56px 0 16px;padding-top:16px;border-top:2px solid var(--border2); }
+    .article-body h3 { font-family:var(--font-h);font-size:19px;font-weight:700;color:var(--text);margin:36px 0 12px; }
+    .article-body p { font-size:16px;line-height:1.8;color:#2d3a4a;margin-bottom:20px; }
+    .article-body ul,
+    .article-body ol { padding-left:24px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px; }
+    .article-body li { font-size:15px;line-height:1.7;color:#2d3a4a; }
+    .article-body strong { color:var(--text); }
+    .article-callout { background:var(--red-dim);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:20px 24px;margin:32px 0; }
+    .article-callout--tip { background:rgba(0,120,80,.07);border-left-color:#008c5a; }
+    .article-callout p { margin:0;color:var(--text);font-weight:500;font-size:15px; }
+    .article-table-wrap { overflow-x:auto;margin:32px 0; }
+    .article-table { width:100%;border-collapse:collapse;font-size:14px; }
+    .article-table th { background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-family:var(--font-h);font-weight:600;font-size:13px; }
+    .article-table td { padding:13px 16px;border-bottom:1px solid var(--border);vertical-align:top; }
+    .article-table tr:hover td { background:var(--surface); }
+    .article-cta { background:var(--navy);border-radius:8px;padding:40px;margin:56px 0 0;text-align:center; }
+    .article-cta h3 { font-family:var(--font-h);font-size:22px;font-weight:800;color:#fff;margin-bottom:12px; }
+    .article-cta p { font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px; }
+    .badge { display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px;vertical-align:middle;margin-left:4px; }
+    .badge--green { background:rgba(0,140,90,.15);color:#008c5a; }
+    .badge--yellow { background:rgba(200,140,0,.12);color:#a07800; }
+    .badge--red { background:rgba(200,40,40,.12);color:#c42020; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-toc { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-reveal"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="services.html">Услуги</a>
+    <a href="blog.html">Блог</a>
+    <a href="contact.html">Контакты</a>
+    <a href="mailto:gorn.import@mail.ru" class="mobile-menu__email">gorn.import@mail.ru</a>
+  </div>
+
+  <nav class="nav nav--dark" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+      <div class="nav__links">
+        <a href="about.html">О нас</a>
+        <a href="services.html">Услуги</a>
+        <a href="blog.html">Блог</a>
+        <a href="contact.html">Контакты</a>
+      </div>
+      <a href="contact.html" class="btn btn--outline-white">Обсудить задачу</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero__pattern"></div>
+    <div class="article-hero__red-bar"></div>
+    <div class="container">
+      <div class="article-hero__tag reveal-up">
+        <a href="blog.html" style="color:var(--gold)">← Блог</a>
+        <span style="opacity:.4">·</span>
+        <span>Расчёты</span>
+      </div>
+      <h1 class="article-hero__title reveal-up" style="--delay:.1s">
+        Как платить китайским поставщикам в&nbsp;2026 году: Swift, юань, криптовалюта
+      </h1>
+      <div class="article-hero__meta reveal-up" style="--delay:.2s">
+        <span><strong>Автор:</strong> Анна Степанова</span>
+        <span><strong>Обновлено:</strong> Май 2026</span>
+        <span><strong>Время чтения:</strong> 9 минут</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-layout">
+
+        <article class="article-body reveal-up">
+
+          <p>Вопрос «как перевести деньги в Китай» превратился из рутинного в стратегический. После 2022 года платёжный ландшафт кардинально изменился — и продолжает меняться каждые несколько месяцев. В этой статье разбираем все актуальные схемы с их реальными плюсами, минусами и рисками.</p>
+
+          <div class="article-callout">
+            <p>💡 Статья написана на основе практики сопровождения более 500 ВЭД-сделок. Ситуация с платежами меняется быстро — перед каждой сделкой уточняйте актуальную схему у специалиста. Пишите: <a href="mailto:gorn.import@mail.ru" style="color:var(--red)">gorn.import@mail.ru</a></p>
+          </div>
+
+          <h2 id="situation">Текущая ситуация: какие банки проводят платежи в Китай</h2>
+
+          <p>По состоянию на май 2026 года прямые платежи из России в Китай в долларах и евро практически невозможны: крупные китайские банки (Bank of China, ICBC, China Construction Bank, Agricultural Bank) отказывают в обработке транзакций из России, опасаясь вторичных санкций со стороны США.</p>
+
+          <p>Ситуация неоднородная и нестабильная. Банки, которые проводили платежи три месяца назад, могут отказать сегодня — и наоборот. Это не их прихоть: каждый банк оценивает комплаенс-риски самостоятельно, и оценки меняются.</p>
+
+          <h3>Что работает в 2026 году:</h3>
+          <ul>
+            <li><strong>Юаневые переводы</strong> через российские банки с прямыми корреспондентскими счетами в КНР (ограниченный список)</li>
+            <li><strong>Платежи через третьи страны</strong> — ОАЭ, Казахстан, Гонконг, Турция</li>
+            <li><strong>Платёжные агенты</strong> — компании с зарубежными счетами, принимающие рубли и отправляющие CNY или USD поставщику</li>
+            <li><strong>USDT и другие стейблкоины</strong> — для тех, кто принимает риски (и правовые, и технические)</li>
+            <li><strong>Бартерные и зачётные схемы</strong> — для торговых домов со встречными поставками</li>
+          </ul>
+
+          <div class="article-callout">
+            <p>⚠️ Схемы с фиктивными документами, подставными компаниями и намеренным сокрытием российского участника — незаконны. Они создают уголовные риски как для российской, так и для иностранной стороны. В статье описаны только легальные инструменты.</p>
+          </div>
+
+          <h2 id="swift">SWIFT через третьи страны: Казахстан, ОАЭ, Гонконг</h2>
+
+          <p>Это наиболее распространённая и относительно прозрачная схема. Суть: российская компания переводит средства в иностранный банк (часто через дружественную юрисдикцию), а оттуда они уходят поставщику в Китай в USD, EUR или CNY.</p>
+
+          <h3>Через Казахстан</h3>
+          <p>Банки Казахстана (Halyk Bank, Kaspi Bank, Jusan Bank) исторически обслуживали российский бизнес, однако с 2023–2024 годов большинство из них ужесточили комплаенс под давлением американских партнёров. Работающие коридоры есть, но они требуют наличия реального юридического лица в Казахстане или надёжного агента.</p>
+          <ul>
+            <li>Комиссия: 2–4% от суммы + SWIFT-тариф банка ($30–80)</li>
+            <li>Срок: 3–7 рабочих дней</li>
+            <li>Риск: банк может «заморозить» платёж на доп. верификацию или вернуть его</li>
+          </ul>
+
+          <h3>Через ОАЭ</h3>
+          <p>Emirates NBD, Mashreq Bank и ряд региональных банков ОАЭ сохраняют открытые корреспондентские отношения с Китаем. Для работы нужно открыть корпоративный счёт в ОАЭ — это реально, но занимает 1–3 месяца и требует физического присутствия директора.</p>
+          <ul>
+            <li>Комиссия: 1.5–3% + тариф банка</li>
+            <li>Срок: 2–5 рабочих дней</li>
+            <li>Риск: банки ОАЭ стали значительно более осторожными — запрашивают обширный пакет документов по сделке</li>
+          </ul>
+
+          <h3>Через Гонконг</h3>
+          <p>Гонконгские банки (HSBC HK, Hang Seng, Bank of East Asia) имеют прямые связи с материковым Китаем. Открыть счёт здесь без физического присутствия и реального операционного бизнеса крайне сложно. Зато если счёт есть — это один из лучших каналов для расчётов с КНР.</p>
+          <ul>
+            <li>Комиссия: 0.5–1.5%</li>
+            <li>Срок: 1–3 рабочих дня</li>
+            <li>Риск: высокий порог входа; личная поездка обязательна</li>
+          </ul>
+
+          <div class="article-callout article-callout--tip">
+            <p>💡 При оплате через третьи страны все документы по сделке должны отражать реальные коммерческие отношения. Важно, чтобы в контракте, инвойсе и платёжном поручении были указаны одни и те же стороны, товар и сумма.</p>
+          </div>
+
+          <h2 id="yuan">Платежи в юанях: счета в китайских банках, риски</h2>
+
+          <p>Прямые юаневые расчёты — логичное решение: Китай активно продвигает интернационализацию юаня, и у ряда российских банков сохраняются прямые корсчета в CNY.</p>
+
+          <h3>Российские банки с юаневыми корсчетами в КНР</h3>
+          <p>По имеющимся данным, юаневые переводы в Китай в 2025–2026 году проводят (с разной степенью надёжности): Газпромбанк, Россельхозбанк, ВТБ, ПСБ, некоторые региональные банки. Список не стабилен — уточняйте в своём банке перед сделкой.</p>
+
+          <h3>Открытие счёта напрямую в китайском банке</h3>
+          <p>Теоретически возможно для юридических лиц из России — но на практике в 2026 году крупные китайские банки отказывают в открытии счетов российским компаниям или вводят настолько длительную верификацию, что это непрактично. Малые региональные банки КНР более открыты, но несут риски надёжности.</p>
+
+          <ul>
+            <li>Комиссия за юаневые переводы: 0.5–2%</li>
+            <li>Срок: 2–5 рабочих дней</li>
+            <li>Риск: не все поставщики принимают CNY на счёт с российским отправителем — некоторые отказывают из-за комплаенса своего банка</li>
+          </ul>
+
+          <div class="article-callout">
+            <p>⚠️ Конвертация рубль → юань в России происходит по биржевому курсу плюс банковская маржа. Итоговый курс может быть на 2–4% хуже рыночного. Уточняйте в банке заранее.</p>
+          </div>
+
+          <h2 id="agents">Платёжные агенты: как работают, на что обратить внимание</h2>
+
+          <p>Платёжный агент — компания (российская или иностранная), у которой есть зарубежный счёт. Вы платите им рублями (или валютой) в России, они конвертируют и отправляют сумму вашему поставщику в Китае. Это удобно, но несёт специфические риски.</p>
+
+          <h3>Как выглядит типичная схема:</h3>
+          <ol>
+            <li>Заключаете агентский договор с платёжным агентом</li>
+            <li>Агент предоставляет реквизиты для перевода в рублях</li>
+            <li>Переводите сумму + комиссию агенту на его российский счёт</li>
+            <li>Агент конвертирует средства и отправляет поставщику в течение 2–5 дней</li>
+            <li>Получаете подтверждение и SWIFT-копию платежа</li>
+          </ol>
+
+          <h3>На что обратить внимание при выборе агента:</h3>
+          <ul>
+            <li><strong>Юридическая прозрачность:</strong> наличие реального договора, ИНН/ОГРН, реквизиты компании</li>
+            <li><strong>Опыт и репутация:</strong> отзывы, кейсы, период работы на рынке</li>
+            <li><strong>Комиссия и курс:</strong> совокупные расходы (комиссия + потери на курсе) должны быть прозрачны до начала сделки</li>
+            <li><strong>Подтверждающие документы:</strong> агент должен предоставить SWIFT-копию платежа в Китай для вашей бухгалтерии и валютного контроля</li>
+            <li><strong>Схема оформления:</strong> агентский договор должен правильно квалифицировать операцию для целей валютного контроля</li>
+          </ul>
+
+          <p>Стандартная комиссия добросовестных агентов в 2026 году — <strong>3–6%</strong> от суммы. Всё, что ниже 2%, должно вызывать вопросы.</p>
+
+          <div class="article-callout">
+            <p>⚠️ На рынке появились мошеннические «агенты», которые берут предоплату и исчезают. Правило простое: до перевода крупной суммы сделайте пробный платёж на $500–1000. Проверьте, что деньги дошли и есть SWIFT-подтверждение.</p>
+          </div>
+
+          <h2 id="crypto">Криптовалюта (USDT): легальность в РФ, риски для бизнеса</h2>
+
+          <p>USDT (Tether) и другие стейблкоины активно используются для расчётов с китайскими поставщиками. Это самый быстрый и комиссионно выгодный способ — но с наибольшим числом правовых нюансов.</p>
+
+          <h3>Правовой статус в России (май 2026)</h3>
+          <p>Закон о цифровых финансовых активах (259-ФЗ) и экспериментальный режим использования криптовалюты во внешнеторговых расчётах (эксперимент ЦБ) создали ограниченное правовое поле. Использование USDT для международных платежей формально допускается в рамках экспериментального режима — но только для аккредитованных участников. Для большинства обычных компаний это юридически серая зона.</p>
+
+          <h3>Риски при оплате через USDT:</h3>
+          <ul>
+            <li><strong>Налоговые риски:</strong> транзакции сложно корректно отразить в учёте; ФНС может переквалифицировать операцию</li>
+            <li><strong>Валютный контроль:</strong> расчёты в крипте не закрывают паспорт сделки и могут привести к претензиям со стороны банка-агента</li>
+            <li><strong>Риск блокировки кошелька:</strong> USDT на сети TRC-20 или ERC-20 может быть заморожен Tether Ltd. при попадании в санкционные списки</li>
+            <li><strong>Репутационный риск для поставщика:</strong> крупные китайские фабрики часто отказываются принимать крипту — принимают мелкие посредники</li>
+          </ul>
+
+          <h3>Когда это всё же используют:</h3>
+          <p>На практике USDT используется для небольших первых платежей (образцы, пробные партии до $5 000–10 000), когда скорость важнее документооборота. Для системных поставок — слишком высок правовой риск.</p>
+
+          <div class="article-callout">
+            <p>⚠️ Если ваш партнёр предлагает «оплатить криптой без документов» как основную схему для крупных сделок — это красный флаг. Настоящие производители принимают банковские переводы; криптовалюта как единственный вариант чаще всего означает посредника без реального производства.</p>
+          </div>
+
+          <h2 id="barter">Бартерные схемы и взаиморасчёты</h2>
+
+          <p>Для компаний с двусторонними потоками (экспорт в Китай и импорт из Китая) доступна схема взаимозачёта через торговый дом или агента. Суть: вместо денежного перевода задолженность перед поставщиком погашается поставкой российского товара (сырьё, лесоматериалы, удобрения, металлопрокат) эквивалентной стоимости.</p>
+
+          <p>Это сложно с точки зрения оформления, но позволяет полностью избежать валютных ограничений. Требует наличия российского товара, востребованного в Китае, и квалифицированного ВЭД-юриста для корректного оформления договора мены.</p>
+
+          <p>Для большинства малых импортёров эта схема недоступна — она актуальна для торговых домов с оборотом от $1 млн в год и выше.</p>
+
+          <h2 id="compare">Сравнение способов оплаты по комиссии, скорости и надёжности</h2>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Способ</th>
+                  <th>Комиссия</th>
+                  <th>Срок</th>
+                  <th>Риски</th>
+                  <th>Рекомендуем для</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Юань напрямую</strong> (российский банк)</td>
+                  <td>0.5–2% + маржа на курсе</td>
+                  <td>2–5 дней</td>
+                  <td>Банк может отказать; нестабильность списка банков</td>
+                  <td>Регулярные поставки, крупные суммы <span class="badge badge--green">Оптимально</span></td>
+                </tr>
+                <tr>
+                  <td><strong>SWIFT через Казахстан</strong></td>
+                  <td>2–4% + $30–80</td>
+                  <td>3–7 дней</td>
+                  <td>Заморозка платежа; растущий комплаенс</td>
+                  <td>Умеренные суммы, есть юрлицо в Казахстане <span class="badge badge--yellow">Умеренно</span></td>
+                </tr>
+                <tr>
+                  <td><strong>SWIFT через ОАЭ</strong></td>
+                  <td>1.5–3%</td>
+                  <td>2–5 дней</td>
+                  <td>Нужен счёт в ОАЭ; строгий комплаенс</td>
+                  <td>Компании с зарубежной структурой <span class="badge badge--yellow">Умеренно</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Платёжный агент</strong></td>
+                  <td>3–6%</td>
+                  <td>2–5 дней</td>
+                  <td>Риск мошенничества; правовая квалификация</td>
+                  <td>Разовые или нерегулярные поставки, малый бизнес <span class="badge badge--yellow">Умеренно</span></td>
+                </tr>
+                <tr>
+                  <td><strong>USDT / стейблкоины</strong></td>
+                  <td>0.5–2% (сеть + обмен)</td>
+                  <td>Несколько часов</td>
+                  <td>Правовая неопределённость; налоговые риски; мошенники</td>
+                  <td>Пробные партии, образцы, небольшие суммы <span class="badge badge--red">Осторожно</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Бартер / взаимозачёт</strong></td>
+                  <td>Минимальная (юридическое сопровождение)</td>
+                  <td>Индивидуально</td>
+                  <td>Сложное оформление; нужен встречный товар</td>
+                  <td>Торговые дома, крупный оборот <span class="badge badge--yellow">Для опытных</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Аккредитив</strong></td>
+                  <td>1–3% + банковские комиссии</td>
+                  <td>5–14 дней</td>
+                  <td>Сложное документальное оформление; не все банки открывают</td>
+                  <td>Крупные сделки от $30 000, новые поставщики <span class="badge badge--green">Надёжно</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="protect">Как защитить платёж: аккредитив, Trade Assurance, эскроу</h2>
+
+          <p>Вопрос «как заплатить» и вопрос «как защитить платёж» — разные вопросы. Даже если деньги дошли до поставщика, нет гарантии, что он отгрузит качественный товар вовремя. Разбираем инструменты защиты.</p>
+
+          <h3>Документарный аккредитив (Letter of Credit)</h3>
+          <p>Аккредитив — обязательство банка выплатить продавцу деньги только при предоставлении строго оговорённых документов (коносамент, инвойс, сертификаты качества и т.д.). Это самый надёжный инструмент защиты в международной торговле.</p>
+          <p><strong>Как работает:</strong> вы открываете аккредитив в своём банке. Поставщик получает деньги только когда предоставит документы, подтверждающие реальную отгрузку товара надлежащего качества. Банк проверяет документы — вы не проверяете поставщика лично.</p>
+          <p><strong>Когда использовать:</strong> сделки от $20 000–30 000; новые поставщики без истории; товары с высоким риском подмены (электроника, оборудование).</p>
+          <p><strong>Стоимость:</strong> 1–3% от суммы аккредитива в зависимости от банка и срока.</p>
+
+          <h3>Trade Assurance на Alibaba</h3>
+          <p>Программа Alibaba, защищающая платежи, сделанные через платформу. Если товар не соответствует описанию или не прибыл, покупатель может открыть спор и вернуть деньги.</p>
+          <p><strong>Ограничения:</strong> распространяется только на платежи через Alibaba; максимальная сумма защиты — ограничена лимитом поставщика; не все претензии удовлетворяются; работает для B2B только с золотыми верифицированными поставщиками.</p>
+          <p>Trade Assurance — хороший инструмент для первых сделок с новым поставщиком в сумме до $5 000–10 000. Для крупных регулярных поставок перейдите к аккредитиву или работайте с агентом по инспекции.</p>
+
+          <h3>Условное депонирование (эскроу)</h3>
+          <p>Схема, при которой деньги хранятся у нейтрального посредника и переходят продавцу только после подтверждения покупателем факта получения товара надлежащего качества. В международной торговле с Китаем применяется реже, чем аккредитив, но для крупных онлайн-платформ и ряда агентов доступна.</p>
+
+          <h3>Инспекция перед отгрузкой (Pre-Shipment Inspection)</h3>
+          <p>Это не защита платежа, но защита от некачественного товара. Независимые инспекционные компании (SGS, Bureau Veritas, Intertek) выезжают к поставщику, проверяют готовую партию и составляют отчёт. Вы принимаете решение об отгрузке на основе реальных данных, а не слов поставщика.</p>
+          <p>Стоимость — $250–600 за инспекцию. Экономит в разы больше при обнаружении проблем до отгрузки, а не после получения контейнера.</p>
+
+          <div class="article-callout article-callout--tip">
+            <p>💡 Идеальная схема защиты: платёжный агент с надёжной репутацией + аккредитив или условие 30%/70% + pre-shipment inspection. Это добавляет 1–3% к стоимости сделки и снимает основные риски потери денег или получения некачественного товара.</p>
+          </div>
+
+          <div class="article-cta">
+            <h3>Нужна помощь с платежом в Китай?</h3>
+            <p>Разберём вашу ситуацию: сумму, поставщика, сроки — и подберём оптимальную схему с учётом актуальных ограничений. Консультация бесплатная.</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary btn--large">gorn.import@mail.ru →</a>
+          </div>
+
+        </article>
+
+        <!-- TOC sidebar -->
+        <aside class="article-toc reveal-up" style="--delay:.2s">
+          <h4>Содержание</h4>
+          <ol>
+            <li><a href="#situation">Текущая ситуация</a></li>
+            <li><a href="#swift">SWIFT через третьи страны</a></li>
+            <li><a href="#yuan">Платежи в юанях</a></li>
+            <li><a href="#agents">Платёжные агенты</a></li>
+            <li><a href="#crypto">Криптовалюта (USDT)</a></li>
+            <li><a href="#barter">Бартер и взаиморасчёты</a></li>
+            <li><a href="#compare">Сравнение способов</a></li>
+            <li><a href="#protect">Как защитить платёж</a></li>
+          </ol>
+          <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
+            <p style="font-size:13px;color:var(--muted);margin-bottom:16px">Подобрать схему оплаты под вашу сделку:</p>
+            <a href="mailto:gorn.import@mail.ru" class="btn btn--primary" style="width:100%;justify-content:center;font-size:13px">Написать нам</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal-up"><span class="section-eyebrow-line"></span>Другие статьи</div>
+        <h2 class="section-title reveal-up" style="--delay:.08s">Читайте также</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <a href="blog-supplier-check.html" class="service-item reveal-up">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Как проверить китайского поставщика</h3>
+            <p>7 методов, которые реально работают</p>
+          </div>
+        </a>
+        <a href="blog-customs-duty.html" class="service-item reveal-up" style="--delay:.08s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Таможенные пошлины: как считать</h3>
+            <p>ТН ВЭД, ставки, оптимизация расходов</p>
+          </div>
+        </a>
+        <a href="blog-alibaba-vs-1688.html" class="service-item reveal-up" style="--delay:.16s">
+          <span class="service-item__num">→</span>
+          <div class="service-item__content">
+            <h3>Alibaba vs 1688: что выбрать</h3>
+            <p>Сравнение площадок для закупок в Китае</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--white">GORN<span>.</span>IMPORT</a>
+          <p>Стратегический ВЭД-партнёр для малого и среднего бизнеса.</p>
+        </div>
+        <div class="footer__col">
+          <h5>Навигация</h5>
+          <a href="index.html">Главная</a>
+          <a href="about.html">О нас</a>
+          <a href="services.html">Услуги</a>
+          <a href="blog.html">Блог</a>
+          <a href="contact.html">Контакты</a>
+        </div>
+        <div class="footer__col">
+          <h5>Статьи</h5>
+          <a href="blog-china-import-guide.html">Импорт из Китая: гайд</a>
+          <a href="blog-supplier-check.html">Проверка поставщика</a>
+          <a href="blog-payment-china.html">Платежи в Китай 2026</a>
+          <a href="blog-customs-duty.html">Таможенные пошлины</a>
+        </div>
+        <div class="footer__col">
+          <h5>Контакты</h5>
+          <a href="mailto:gorn.import@mail.ru" class="accent">gorn.import@mail.ru</a>
+          <a href="contact.html">Написать нам</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Gorn Import. Все права защищены.</span>
+        <span>Анна Степанова — ВЭД-эксперт</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

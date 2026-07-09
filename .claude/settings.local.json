@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/Users/marsianin/Desktop/anna gorn website\" && cp \"ДОПОЛНЕНИЯ К ТЕХНИЧЕСКОМУ ЗАДАНИЮ ПО РАЗРАБОТКЕ САЙТА.pages\" /tmp/doc.zip && cd /tmp && unzip -o doc.zip -d doc_extracted 2>/dev/null | head -20 && ls /tmp/doc_extracted/)",
+      "Bash(textutil -convert txt \"/Users/marsianin/Desktop/anna gorn website/ДОПОЛНЕНИЯ К ТЕХНИЧЕСКОМУ ЗАДАНИЮ ПО РАЗРАБОТКЕ САЙТА.pages\" -output /tmp/doc_text.txt)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(lsof -ti:3456)",
+      "Bash(sort -t _ -k1)",
+      "Bash(xargs ls -lt)",
+      "WebFetch(domain:mates-china.com)",
+      "WebFetch(domain:www.mriglobal.org)",
+      "Bash(python3 -c \"from PIL import Image, ImageEnhance, ImageFilter; print\\('PIL ok'\\)\")",
+      "Bash(python3 -c \"import rembg; print\\('rembg ok'\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3)",
+      "Bash(python3 -c ' *)",
+      "Bash(kill 11516)",
+      "Bash(mkdir -p blog-images)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
+      "Bash(cat)",
+      "Bash(python3 /tmp/gen_blog_images.py)",
+      "mcp__visualize__read_me",
+      "Bash(xargs kill -9)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3456/index.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3456/)",
+      "mcp__visualize__show_widget",
+      "mcp__Claude_in_Chrome__navigate",
+      "Bash(vercel --version)",
+      "Bash(vercel login *)",
+      "Bash(vercel --yes --no-color)",
+      "Bash(vercel --yes --no-color --scope up-digital-s-projects)",
+      "Bash(vercel --yes --no-color --scope up-digital-s-projects --name anna-gorn-website)",
+      "Bash(vercel deploy *)",
+      "Bash(cd \"/Users/marsianin/Desktop/anna gorn website\" && sed -i '' 's/на до 25–30%/до 25–30%/g' index.html about.html services.html contact.html blog.html blog-*.html && echo \"done\")",
+      "Bash(sed -i '' 's/<span class=\"trust-bar__sep\">·<\\\\/span>\\\\n        <span class=\"trust-bar__sep\">·<\\\\/span>/<span class=\"trust-bar__sep\">·<\\\\/span>/g' index.html)",
+      "Bash(gh auth *)",
+      "Bash(brew install *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
