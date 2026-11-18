@@ -27,12 +27,11 @@
   const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
   const cursor = document.getElementById('cursor');
   const follower = document.getElementById('cursorFollower');
+  if (cursor) cursor.style.display = isTouchDevice ? 'none' : '';
+  if (follower) follower.style.display = isTouchDevice ? 'none' : '';
   if (!cursor || !follower || isTouchDevice) {
-    if (cursor) cursor.style.display = 'none';
-    if (follower) follower.style.display = 'none';
-    if (isTouchDevice) return;
-    return;
-  }
+    // skip cursor init but continue rest of JS
+  } else {
 
   let mx = window.innerWidth / 2, my = window.innerHeight / 2;
   let fx = mx, fy = my;
@@ -67,6 +66,8 @@
     });
   });
 
+  } // end cursor else
+
   /* ===== NAV SCROLL ===== */
   const nav = document.getElementById('nav');
   if (nav) {
@@ -93,12 +94,19 @@
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
       document.body.classList.toggle('no-scroll');
+      const tgFloat = document.querySelector('.tg-float');
+      if (tgFloat) tgFloat.style.display = mobileMenu.classList.contains('open') ? 'none' : '';
     });
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
         burger.classList.remove('open');
         mobileMenu.classList.remove('open');
         document.body.classList.remove('no-scroll');
+        if (href && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('http')) {
+          e.preventDefault();
+          setTimeout(() => { window.location.href = href; }, 50);
+        }
       });
     });
   }
@@ -195,8 +203,8 @@
     });
   });
 
-  /* ===== PAGE TRANSITIONS ===== */
-  document.querySelectorAll('a[href]').forEach(link => {
+  /* ===== PAGE TRANSITIONS (desktop only) ===== */
+  if (!isTouchDevice) document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return;
 
